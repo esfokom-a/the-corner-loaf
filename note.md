@@ -60,4 +60,4 @@ I explored a layout with a large image and Preorder button first, followed by op
 
 I made all three food photographs used on the page WebP and replaced the "Available today" placeholders with the supplied sourdough, whole wheat and chin chin photos. I used my locally installed FFmpeg to convert the two JPEGs and optimize the existing Chin Chin WebP, with quality 80, compression level 6 and a maximum width of 640px without enlarging smaller images.
 
-The served photographs total 118,478 bytes, down from 356,944 bytes (about 67% smaller). I kept the source originals, added descriptive alt text and image dimensions, and used simple CSS to fit the photos into the mobile rows and desktop cards. No JavaScript is needed.
+The three larger WebP versions total 118,478 bytes, down from 356,944 bytes (about 67% smaller). I also added 176px WebP variants for mobile thumbnails, selected with native srcset and sizes attributes. I removed unused source originals, added descriptive alt text and image dimensions, and used simple CSS to fit the photos into the mobile rows and desktop cards. No JavaScript is needed.

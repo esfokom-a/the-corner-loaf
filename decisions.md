@@ -12,29 +12,27 @@ Each entry records what we chose and why it helps The Corner Loaf or its custome
 ### Colour palette
 
 - I chose warm ivory (#FFF8F0) for the page background and light cream (#FFFCF7) for cards, forms and FAQ panels because their near-white warmth reflects Marcus's welcoming, unfussy shop while keeping the content clear.
-- I chose burnt orange (#B54708) for primary buttons, links and selected controls because a restrained warm accent suits the bakery and helps commuters recognise where they can act; light-cream button text has 5.30:1 contrast and orange links on warm ivory have 5.15:1 contrast.
-- I chose dark brown (#38271E) for headings, body text, product names and prices, and muted brown (#6E584B) for supporting descriptions because customers checking mid-walk need readable information with a clear order of importance; their contrast on warm ivory is 13.50:1 and 6.31:1 respectively.
-- I chose pale orange (#FBE8D4) for today's availability or opening-status panel and pale sage (#EDF0E5) for location and hours because grouping these visit essentials helps customers decide whether to stop; brown text remains readable, with even muted brown reaching 5.57:1 on pale orange and 5.76:1 on sage.
+- I chose burnt orange (#B54708) for primary buttons, links and selected controls because a restrained warm accent suits the bakery and helps commuters recognise where they can act; the checked button-text and link/background combinations exceed the WCAG AA normal-text threshold of 4.5:1.
+- I chose dark brown (#38271E) for headings, body text and product names, and muted brown (#6E584B) for supporting descriptions because customers checking mid-walk need readable information with a clear order of importance; both exceed the WCAG AA normal-text contrast threshold of 4.5:1 against warm ivory. Prices use the orange accent.
+- I chose pale orange (#FBE8D4) for today's availability or opening-status panel and pale sage (#EDF0E5) for location and hours because grouping these visit essentials helps customers decide whether to stop; the checked brown-text combinations exceed the WCAG AA normal-text contrast threshold of 4.5:1 on both surfaces.
 
 ### Typography
 
 - I chose Fraunces from Google Fonts at weight 600 for the bakery name and section headings, with Georgia and serif fallbacks, because its expressive, warm character gives Marcus's small bakery a personal identity; the fallbacks keep headings readable while the font loads.
 - I chose Arial with sans-serif fallbacks for product names, descriptions, prices, hours, FAQs and forms because familiar, straightforward letterforms help customers scan practical information quickly without requiring another font download.
-- I chose a mobile type scale of 40px for the bakery name, 24px for section headings, 18px bold for product names and FAQ questions, 16px for body text and hours, and 14px for secondary details. The larger name and a short double rule echo Sketch A and give the header a distinctive identity without introducing a hero section.
-- I increased the bakery name to 56px on wider screens, where it has room to stand out.
-- I chose line heights of 1.5 for body text and 1.2 for headings because descriptions and answers need breathing room, while compact headings keep the first part of the page focused on the three vital answers.
+- I chose a mobile type scale of 40px for the bakery name, 24px for section headings, 18px bold for mobile product names and FAQ questions, 20px for prices, 16px for body text and hours, and 14px for secondary details. The larger name and a short double rule echo Sketch A and give the header a distinctive identity without introducing a hero section.
+- I increased the bakery name to 56px and product names to 20px on wider screens, where they have room to stand out.
+- I chose line heights of 1.5 for body text, 1.65 for product descriptions, 1.2 for main/section headings and 1.35 for product names because descriptions and answers need breathing room, while compact headings keep the first part of the page focused on the three vital answers.
 
 ### Spacing
 
-- I chose a 4px spacing base with reusable steps of 4, 8, 16, 24, 32 and 48px because a consistent rhythm makes Marcus's page easier to scan and avoids the clutter caused by unrelated gaps.
-- I chose 4px between closely related details, 8px from product names to descriptions and FAQ questions to answers, 16px between product rows, and 24px between FAQ pairs because related information should sit closer together than separate groups, helping customers match each answer or price to the right question or product.
-- I chose 16px side padding on phones, 24px padding inside larger panels, and section gaps of 32px on phones and 48px on wider screens because customers need readable separation without excessive scrolling before reaching the shelf and location.
-
+- I used a shared spacing scale for forms and FAQs and repeated 8, 16, 24, 32 and 48px steps elsewhere. Product cards also use 20px padding and gaps. Some repeated values remain literal CSS values rather than custom properties; the system is not completely tokenized. The audit records this as a maintenance issue.
+- Mobile page gutters are 16px, product-card padding is 20px, and visit/form panel padding is 24px. Main section gaps are 32px on phones and 48px from the 48rem breakpoint. Product tiles have 16px gaps; FAQ cards have 24px gaps and 16px padding.
 
 ## Semantic structure and accessibility
 
 - I chose semantic header, navigation, main, section, address and footer elements, one h1 and ordered section headings because customers using assistive navigation need direct routes to the same shelf and visit information as everyone else.
-- I chose a skip link, visible focus outlines, underlined links and controls at least 44px high because keyboard users and customers tapping a phone mid-walk need clear, easy-to-reach navigation without relying on colour alone; WCAG 2.2 Level AA is the accessibility target, rather than an unverified conformance claim.
+- I chose a skip link, visible focus outlines, underlined text links and primary standalone controls at least 44px high because keyboard users and customers tapping a phone mid-walk need clear, easy-to-reach navigation without relying on colour alone; WCAG 2.2 Level AA is the accessibility target, rather than an unverified conformance claim.
 - I chose persistent form labels, appropriate input types and autocomplete attributes because customers should retain the context of each field while entering their details. Both forms remain enabled as part of the static interface; their current implementation limits are documented below.
 
 ## HTML-only interactions and content
@@ -47,7 +45,7 @@ Each entry records what we chose and why it helps The Corner Loaf or its custome
 - I kept the concise three-row weekly hours list: Monday-Friday 7am-5pm, Saturday 7am-2pm, Sunday closed. The example shelf no longer shows recurring bake-day labels, because this section describes what is available today.
 - At the user's request, the static demonstration says "Open today" and "Until 5 p.m.", with a green indicator. This example is independent of the actual calendar date. Opening status and the three available products are manually authored demonstration content; no JavaScript, live stock feed or time calculation is used.
 - I simplified the location panel to “Visit the bakery”, the full address, a restrained “Get directions” link with a decorative map-pin icon, and the grouped hours.
-- I kept the existing prices, descriptions, opening hours, address and contact details. The three available foods now use the supplied photographs, replacing the temporary image placeholders.
+- I kept the existing prices, opening hours, address and contact details, and rewrote the product descriptions for shorter previews with optional detail. The three available foods now use the supplied photographs, replacing the temporary image placeholders.
 
 ## Responsive implementation
 
@@ -67,8 +65,8 @@ Each entry records what we chose and why it helps The Corner Loaf or its custome
 
 ## Optimized food photographs
 
-- I made all three food images used by the page WebP. I used the locally installed FFmpeg with libwebp, quality 80 and compression level 6, removed metadata, and limited image width to 640px without upscaling. The two JPEGs were converted; the existing Chin Chin WebP was optimized further. Original source files remain available in assets.
-- The page loads `assets/sourdough-loaf.webp` (42,186 bytes, 640 x 640), `assets/whole-wheat-loaf.webp` (30,406 bytes, 554 x 554), and `assets/chin-chin.webp` (45,886 bytes, 500 x 500). Together they are 118,478 bytes instead of 356,944 bytes, approximately 67% smaller.
+- I made all three food images used by the page WebP. I used the locally installed FFmpeg with libwebp, quality 80 and compression level 6, removed metadata, and limited image width to 640px without upscaling. The two JPEGs were converted; the existing Chin Chin WebP was optimized further. The unused source originals were removed; the page references only the optimized food assets.
+- The larger WebP sources are `assets/sourdough-loaf.webp`, `assets/whole-wheat-loaf.webp` and `assets/chin-chin.webp`. Each also has a 176px `-small.webp` version. Native `srcset` and `sizes` let the browser choose an appropriate download for the 88px mobile thumbnail or larger desktop card. All six image files are referenced by the HTML.
 - I used actual img elements with descriptive alt text and intrinsic width and height attributes. Simple object-fit styling keeps square mobile thumbnails and larger desktop photographs consistent without stretching them. This preserves the vertical mobile food list and requires no JavaScript.
 
 ## Available-today tile refinement
@@ -89,3 +87,10 @@ Each entry records what we chose and why it helps The Corner Loaf or its custome
 - At the user's request, I enabled both form fieldsets and removed all "coming soon" button and legend text and all on-page "isn't available yet" messages. The buttons read "Submit preorder" and "Send message"; the fieldsets have concise legends and retain their persistent labels and input attributes.
 - These are static interface examples for now. The existing JavaScript file contains exercise comments only; there is no submission handler, preorder tracker, message processing or receiving service. Clicking either button does not place an order, send a message or display a success confirmation. Implementation will follow in the JavaScript work.
 - I used enabled `type="button"` controls until submission is implemented, so clicking them does not trigger the browser's default GET submission, reload the page or put entered details in the URL. No JavaScript was added or loaded. The WhatsApp and email links remain available as contact routes.
+
+## Verification and cleanup
+
+- I checked the implementation against this log and corrected outdated claims about price colour, spacing, image files and type sizes. I record contrast as exceeding the applicable WCAG threshold, rather than giving exact calculated ratios.
+- The current findings, validator result, Lighthouse results and limits of the review are in [audit.md](audit.md). This is a first review, not a full WCAG conformance claim.
+- I retained the referenced food photographs, responsive thumbnail variants and favicon. I removed the unused local font download and its accompanying licence; the Google Fonts stylesheet remains the active font source. Sketches and the unloaded JavaScript exercise file remain part of the coursework.
+- At the user's request, detailed audit reports and the temporary check script were removed with the audits folder. The written audit is the retained diagnosis.

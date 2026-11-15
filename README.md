@@ -6,6 +6,8 @@ A mobile-first bakery website built with HTML and CSS, with today's foods, price
 
 Open `index.html`, or run `python -m http.server 5500` and visit http://localhost:5500 for a local preview.
 
+**Additional feature:** I added an “Ask about availability” WhatsApp link to each product. Customers can ask about a bake directly from its tile without scrolling to the contact section. The link prepares a message naming the product, helping customers check stock before travelling and giving Marcus clearer enquiries to answer. Customers still choose whether to send the message; it does not place an order.
+
 AI helped with brainstorming, low-level Markdown formatting and wording, and assisted with HTML/CSS implementation, image optimization and checks. I owned the design decisions and final choices, directing and reviewing the work.
 
 See [notes](note.md), [decisions](decisions.md) and [audit](audit.md).

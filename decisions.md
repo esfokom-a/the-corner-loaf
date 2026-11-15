@@ -30,7 +30,7 @@ These decisions explain the final page and how it supports The Corner Loaf's cus
 
 - I used 16px mobile gutters, 20px product-card padding and 24px panel padding. Section gaps increase from 32px to 48px on wider screens to preserve a clear reading rhythm.
 - I used a mobile-first layout with one 48rem breakpoint. Grid aligns mobile product content; Flexbox handles navigation, product lists and wider layouts.
-- I used shared CSS variables and simple class selectors to keep the code explainable. Some spacing and component values remain literal CSS values rather than shared variables.
+- I used simple class selectors and shared variables for spacing, radii, colours and shadows to keep the code consistent and explainable. Spacing names state their pixel size, and the menu width uses the same gutter variable as the page container.
 
 ## Navigation and accessibility
 

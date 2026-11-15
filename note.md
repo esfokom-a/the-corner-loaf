@@ -1,4 +1,4 @@
-﻿# The Corner Loaf — Lab Notes
+# The Corner Loaf — Lab Notes
 
 ## Brief to priorities
 

@@ -1,0 +1,137 @@
+{
+  "scope": "Source structure and explicit CSS colour pairs; not full WCAG conformance or HTML validation",
+  "source_checks": "PASS",
+  "checks": [
+    "balanced HTML tags",
+    "unique IDs and valid fragment/ARIA references",
+    "labelled inputs and descriptive image alternatives",
+    "one h1 and ordered headings",
+    "header/nav/main/footer landmarks",
+    "three products and seven closed disclosures",
+    "enabled forms with non-submitting buttons",
+    "no loaded scripts or inline handlers/styles",
+    "one mobile-first media query; no ID selectors, !important or complex pseudo-classes"
+  ],
+  "contrast_method": "WCAG 2.2 sRGB relative luminance; (Llighter + 0.05) / (Ldarker + 0.05); compare before rounding",
+  "contrast_checks": [
+    {
+      "pair": "text on page",
+      "foreground": "#38271e",
+      "background": "#fff8f0",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "text on surface",
+      "foreground": "#38271e",
+      "background": "#fffcf7",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "text on warm",
+      "foreground": "#38271e",
+      "background": "#fbe8d4",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "text on sage",
+      "foreground": "#38271e",
+      "background": "#edf0e5",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "muted on page",
+      "foreground": "#6e584b",
+      "background": "#fff8f0",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "muted on surface",
+      "foreground": "#6e584b",
+      "background": "#fffcf7",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "muted on warm",
+      "foreground": "#6e584b",
+      "background": "#fbe8d4",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "muted on sage",
+      "foreground": "#6e584b",
+      "background": "#edf0e5",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "accent on page",
+      "foreground": "#b54708",
+      "background": "#fff8f0",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "accent on surface",
+      "foreground": "#b54708",
+      "background": "#fffcf7",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "accent on warm",
+      "foreground": "#b54708",
+      "background": "#fbe8d4",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "accent on sage",
+      "foreground": "#b54708",
+      "background": "#edf0e5",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "button text",
+      "foreground": "#fffcf7",
+      "background": "#b54708",
+      "threshold": "4.5:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "form boundary",
+      "foreground": "#6e584b",
+      "background": "#fffcf7",
+      "threshold": "3:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "open status indicator",
+      "foreground": "#35613f",
+      "background": "#fbe8d4",
+      "threshold": "3:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "whatsapp-link icon",
+      "foreground": "#ffffff",
+      "background": "#128c46",
+      "threshold": "3:1",
+      "result": "PASS - above threshold"
+    },
+    {
+      "pair": "whatsapp-link:hover icon",
+      "foreground": "#ffffff",
+      "background": "#0d7038",
+      "threshold": "3:1",
+      "result": "PASS - above threshold"
+    }
+  ]
+}

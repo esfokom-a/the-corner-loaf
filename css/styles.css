@@ -85,6 +85,18 @@ section { scroll-margin-top: 1rem; }
 .product-more { margin-top: .25rem; }
 .product-more summary { width: fit-content; min-height: 2.75rem; padding-block: .5rem; color: var(--color-accent); font-size: .875rem; font-weight: 700; }
 .product-full-description { padding-bottom: .5rem; }
+.product-enquiry { display: flex; align-items: center; gap: .5rem; min-height: 2.75rem; margin-top: .25rem; font-size: .875rem; font-weight: 700; }
+
+/* The wider range stays collapsed so today's selection remains easy to scan. */
+.other-bakes { margin-top: var(--space-4); padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-panel); background: var(--color-surface); }
+.other-bakes summary { min-height: 2.75rem; padding-block: var(--space-2); color: var(--color-accent); font-size: var(--text-item); font-weight: 700; }
+.other-bakes-note { margin-top: var(--space-2); color: var(--color-muted); }
+.other-bakes-list { display: flex; flex-direction: column; gap: var(--space-3); margin: var(--space-3) 0 0; padding: 0; list-style: none; }
+.other-bake { padding-top: var(--space-3); border-top: 1px solid var(--color-border); }
+.other-bake-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-2) var(--space-3); }
+.other-bake-price { color: var(--color-accent); font-size: var(--text-item); font-weight: 700; font-variant-numeric: tabular-nums; }
+.bake-schedule { margin-top: var(--space-2); font-size: var(--text-small); font-weight: 700; }
+.other-bake-description { margin-top: var(--space-2); color: var(--color-muted); }
 
 .visit-panel { display: flex; flex-direction: column; gap: 1.5rem; padding: 1.5rem; border: 1px solid var(--color-border); border-radius: var(--radius-panel); background: var(--color-sage); }
 .visit-address address { margin-top: .75rem; }

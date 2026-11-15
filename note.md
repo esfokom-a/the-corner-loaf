@@ -55,3 +55,19 @@ I also placed the opening status above the products to help customers judge whet
 [View Sketch B](sketches/corner-loaf-b.png)
 
 I explored a layout with a large image and Preorder button first, followed by opening hours, location and today's products. I did not choose it because the image and preorder action push availability further down, making commuters work harder to answer their main question.
+
+## Food image optimization
+
+I made all three food photographs used on the page WebP and replaced the "Available today" placeholders with the supplied sourdough, whole wheat and chin chin photos. I used my locally installed FFmpeg to convert the two JPEGs and optimize the existing Chin Chin WebP, with quality 80, compression level 6 and a maximum width of 640px without enlarging smaller images.
+
+The three larger WebP versions total 118,478 bytes, down from 356,944 bytes (about 67% smaller). I also added 176px WebP variants for mobile thumbnails, selected with native srcset and sizes attributes. I removed unused source originals, added descriptive alt text and image dimensions, and used simple CSS to fit the photos into the mobile rows and desktop cards. No JavaScript is needed.
+
+## Additional improvement beyond the brief
+
+Customers checking the page mid-walk may need to confirm that a particular bake is still available before visiting. I added an "Ask about availability" link to each food tile, opening WhatsApp with a question naming that product. This helps customers avoid a wasted trip and gives Marcus clearer messages to answer, extending the general contact link into a product-specific enquiry.
+
+I chose this over a weekly bake guide or an ingredient guide because it directly addresses uncertainty about today's stock and is achievable within the HTML/CSS scope. The links prepare a message; customers still choose whether to send it, and no stock or order confirmation is implied.
+
+## The rest of the range
+
+I kept Butter Croissants, Banana Bread and Meat Pies in an "Our other bakes" disclosure below today's selection. Their original prices and usual bake days help customers plan another visit without suggesting they are in stock today; the banana bread price is clearly identified as a slice price. Product-specific WhatsApp links ask when each bake will next be available. The disclosure starts closed and uses native HTML, keeping the first view focused and requiring no JavaScript.

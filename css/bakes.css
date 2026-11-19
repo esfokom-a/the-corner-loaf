@@ -1,0 +1,158 @@
+/* Mobile tiles: photo beside the name and price; description spans the card.
+   Two columns keep the price from squeezing the description into a narrow strip. */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.product {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-20) var(--space-16);
+  min-width: 0;
+  padding: var(--space-20);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+.product-image {
+  display: block;
+  width: 5.5rem;
+  height: 5.5rem;
+  object-fit: cover;
+  border-radius: var(--radius-photo);
+  background: var(--color-warm);
+}
+.product-copy {
+  min-width: 0;
+}
+.product-copy h3 {
+  font-size: 1.125rem;
+  line-height: 1.35;
+}
+.product-price {
+  margin-top: var(--space-8);
+  color: var(--color-accent);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.product-description {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+/* Native disclosures provide tap and keyboard expansion without scripts. */
+.product-more {
+  margin-top: var(--space-4);
+}
+.product-more summary {
+  width: fit-content;
+  min-height: 2.75rem;
+  padding-block: var(--space-8);
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.product-full-description {
+  padding-bottom: var(--space-8);
+}
+.product-enquiry {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-height: 2.75rem;
+  margin-top: var(--space-4);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+/* The wider range stays collapsed so today's selection remains easy to scan. */
+.other-bakes {
+  margin-top: var(--space-24);
+  padding: var(--space-16);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  background: var(--color-surface);
+}
+.other-bakes summary {
+  min-height: 2.75rem;
+  padding-block: var(--space-8);
+  color: var(--color-accent);
+  font-size: var(--text-item);
+  font-weight: 700;
+}
+.other-bakes-note {
+  margin-top: var(--space-8);
+  color: var(--color-muted);
+}
+.other-bakes-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin: var(--space-16) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.other-bake {
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--color-border);
+}
+.other-bake-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-8) var(--space-16);
+}
+.other-bake-price {
+  color: var(--color-accent);
+  font-size: var(--text-item);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.bake-schedule {
+  margin-top: var(--space-8);
+  font-size: var(--text-small);
+  font-weight: 700;
+}
+.other-bake-description {
+  margin-top: var(--space-8);
+  color: var(--color-muted);
+}
+
+@media (min-width: 48rem) {
+  .product-list {
+    flex-direction: row;
+  }
+  .product {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--space-20);
+  }
+  .product-copy {
+    width: 100%;
+  }
+  .product-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+  .product-copy h3 {
+    font-size: 1.25rem;
+  }
+  .product-description {
+    flex: 1;
+    width: 100%;
+  }
+}

@@ -48,7 +48,7 @@ I brought the three vital answers into the first part of the page so a customer 
 - **What kind of bakery it is:** I placed the bakery name and space for a short introduction first, to communicate the small neighbourhood bakery's identity without a long introduction.
 - **Where it is:** I included the Boundary Road location panel directly after the products so customers can find the shop after seeing what is on the shelf.
 
-I also placed the opening status above the products to help customers judge whether they can visit. I kept FAQs, the preorder form, About Marcus and messaging below these essentials so they do not delay the quick stop-in decision. The preorder form gives customers a way to request items ahead of a visit, while About Marcus adds the personal story behind the shop.
+I also placed the opening status above the products to help customers judge whether they can visit. FAQs, preordering, About Marcus and contact details sit below these essentials. Customers can request items ahead of a visit on WhatsApp, while About Marcus adds the personal story behind the shop.
 
 ### Sketch B — alternative considered
 
@@ -64,10 +64,10 @@ The three larger WebP versions total 118,478 bytes, down from 356,944 bytes (abo
 
 ## Additional improvement beyond the brief
 
-Customers checking the page mid-walk may need to confirm that a particular bake is still available before visiting. I added an "Ask about availability" link to each food tile, opening WhatsApp with a question naming that product. This helps customers avoid a wasted trip and gives Marcus clearer messages to answer, extending the general contact link into a product-specific enquiry.
+Customers checking the page mid-walk can use the "Order now" link on a food tile to open a WhatsApp draft naming that bake and asking about collection. This gives Marcus a specific order request to reply to.
 
-I chose this over a weekly bake guide or an ingredient guide because it directly addresses uncertainty about today's stock and is achievable within the HTML/CSS scope. The links prepare a message; customers still choose whether to send it, and no stock or order confirmation is implied.
+I chose this because it helps customers check stock and arrange collection within the HTML/CSS scope. Customers send the draft in WhatsApp and confirm the details with Marcus.
 
 ## The rest of the range
 
-I kept Butter Croissants, Banana Bread and Meat Pies in an "Our other bakes" disclosure below today's selection. Their original prices and usual bake days help customers plan another visit without suggesting they are in stock today; the banana bread price is clearly identified as a slice price. Product-specific WhatsApp links ask when each bake will next be available. The disclosure starts closed and uses native HTML, keeping the first view focused and requiring no JavaScript.
+I kept Butter Croissants, Banana Bread and Meat Pies in an "Our other bakes" disclosure below today's selection. Their original prices and usual bake days help customers plan another visit. The banana bread price is for one slice. Product-specific WhatsApp links ask about collection for the next batch. The disclosure starts closed and uses native HTML.

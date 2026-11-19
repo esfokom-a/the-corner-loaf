@@ -1,6 +1,6 @@
 # The Corner Loaf
 
-A mobile-first bakery website built with HTML and CSS, with today's foods, prices, hours and product-specific WhatsApp enquiries. Forms are static; JavaScript submission is deferred.
+A mobile-first bakery website built with HTML and CSS. Customers can browse Menu today, check prices and opening hours, and request orders and preorders on WhatsApp. The contact section provides WhatsApp and email links.
 
 [View the live website on GitHub Pages](https://esfokom-a.github.io/the-corner-loaf/).
 
@@ -8,7 +8,7 @@ A mobile-first bakery website built with HTML and CSS, with today's foods, price
 
 - `index.html` contains the full page, including today's selection and the usual bake schedule.
 - `css/styles.css` holds design tokens and shared styles. The other stylesheets cover the header and footer, bakes, visit information, and preorder and contact sections. Each stylesheet keeps its responsive rules beside the relevant styles.
-- `assets/` holds the food photos and favicon.
+- `assets/` holds the food photos, favicon and WhatsApp icon.
 
 ## Local preview
 
@@ -16,7 +16,9 @@ Open `index.html`, or run `python -m http.server 5500` and visit http://localhos
 
 ## Project notes
 
-**Additional feature:** I added an “Ask about availability” WhatsApp link to each product. Customers can ask about a bake directly from its tile without scrolling to the contact section. The link prepares a message naming the product, helping customers check stock before travelling and giving Marcus clearer enquiries to answer. Customers still choose whether to send the message; it does not place an order.
+Each **Order now** link opens a WhatsApp draft that names the bake and asks about collection. Customers send the message in WhatsApp to request an order.
+
+The preorder and contact forms are deferred until the JavaScript lessons. The [decision log](decisions.md#forms-to-restore-in-the-javascript-lessons) records what to restore.
 
 AI helped with brainstorming, low-level Markdown formatting and wording, and assisted with HTML/CSS implementation, image optimization and checks. I owned the design decisions and final choices, directing and reviewing the work.
 

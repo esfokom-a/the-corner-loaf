@@ -4,7 +4,17 @@ A mobile-first bakery website built with HTML and CSS, with today's foods, price
 
 [View the live website on GitHub Pages](https://esfokom-a.github.io/the-corner-loaf/).
 
+## Project structure
+
+- `index.html` contains the full page, including today's selection and the usual bake schedule.
+- `css/styles.css` holds design tokens and shared styles. The other stylesheets cover the header and footer, bakes, visit information, and preorder and contact sections. Each stylesheet keeps its responsive rules beside the relevant styles.
+- `assets/` holds the food photos and favicon.
+
+## Local preview
+
 Open `index.html`, or run `python -m http.server 5500` and visit http://localhost:5500 for a local preview.
+
+## Project notes
 
 **Additional feature:** I added an “Ask about availability” WhatsApp link to each product. Customers can ask about a bake directly from its tile without scrolling to the contact section. The link prepares a message naming the product, helping customers check stock before travelling and giving Marcus clearer enquiries to answer. Customers still choose whether to send the message; it does not place an order.
 

@@ -1,0 +1,87 @@
+.opening-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-24);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  background: var(--color-warm);
+}
+.status-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.status-dot-open {
+  background: var(--color-open);
+}
+.status-detail {
+  margin-top: var(--space-4);
+  color: var(--color-muted);
+}
+.status-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-height: 2.75rem;
+  font-weight: 700;
+  margin-left: var(--space-24);
+}
+
+.visit-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  padding: var(--space-24);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  background: var(--color-sage);
+}
+.visit-address address {
+  margin-top: var(--space-12);
+}
+.directions-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-height: 2.75rem;
+  margin-top: var(--space-12);
+  font-weight: 700;
+}
+.directions-link .icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.hours-list {
+  margin: 0;
+}
+.hours-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-8) var(--space-16);
+  padding: var(--space-12) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+@media (min-width: 48rem) {
+  .status-link {
+    margin-left: auto;
+  }
+
+  .visit-panel {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--space-48);
+  }
+  .visit-address,
+  .hours-list {
+    flex: 1;
+  }
+}

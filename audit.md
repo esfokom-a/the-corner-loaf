@@ -2,6 +2,8 @@
 
 I reviewed my page against semantic HTML, baseline accessibility and visual consistency, using [W3C WAI Easy Checks](https://www.w3.org/WAI/test-evaluate/easy-checks/), HTML validation and manual Chrome checks. I prioritised the findings by their impact on customers deciding whether to visit the bakery.
 
+This audit covers the earlier version with both forms. The [decision log](decisions.md#forms-to-restore-in-the-javascript-lessons) records their temporary removal.
+
 ## Checks and results
 
 - **Semantic HTML:** The W3C HTML checker returned no errors or warnings. The page has clear landmarks, one main heading and a logical heading order. Links navigate to destinations; buttons represent form actions.

@@ -1,0 +1,60 @@
+.faq-list {
+  display: grid;
+  gap: var(--space-24);
+}
+.faq-item {
+  padding: var(--space-16);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+}
+.faq-item summary {
+  min-height: 2.75rem;
+  padding-block: var(--space-8);
+  font-size: var(--text-item);
+  font-weight: 700;
+}
+.faq-body {
+  margin-top: var(--space-8);
+  max-width: 65ch;
+}
+
+.preorder-panel,
+.contact-panel {
+  padding: var(--space-24);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+}
+
+.preorder-link,
+.contact-details {
+  margin-top: var(--space-12);
+}
+
+.contact-email {
+  display: inline-block;
+  min-height: 2.75rem;
+  padding-block: var(--space-8);
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-height: 2.75rem;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-control);
+  background: var(--color-whatsapp);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.whatsapp-button:hover {
+  background: var(--color-whatsapp-hover);
+}
+
+.whatsapp-button img {
+  flex-shrink: 0;
+}

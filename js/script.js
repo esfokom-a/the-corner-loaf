@@ -1,5 +1,5 @@
 // The Corner Loaf — script.js
-// This file is intentionally empty.
+// This lesson placeholder is not loaded by index.html.
 // You will add the interactive behaviour for this page here in Applied JavaScript.
 
 // === SECTION 1: Pre-order FAQ accordion ===

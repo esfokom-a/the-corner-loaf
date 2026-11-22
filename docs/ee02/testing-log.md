@@ -1,5 +1,7 @@
 # Testing log: The Corner Loaf by Ansah Frederick
 
+This log supports [the audit I wrote of Ansah Frederick’s site](audit-of-ansah-frederick.md). His review of my implementation is in the [audit I received](https://github.com/AnsFredd/the-corner-loaf-redesign/blob/main/docs/ee02/audit-of-elvis-fosu.md).
+
 Site: https://ansfredd.github.io/the-corner-loaf-redesign/
 Source reviewed: github.com/ansfredd/the-corner-loaf-redesign @ 14e3a7a (19 Nov 2026)
 Standard: WCAG 2.2 AA

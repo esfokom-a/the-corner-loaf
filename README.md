@@ -8,7 +8,10 @@ A mobile-first bakery website built with HTML and CSS. Customers can browse Menu
 
 - `index.html` contains the full page, including today's selection and the usual bake schedule.
 - `css/styles.css` holds design tokens and shared styles. The other stylesheets cover the header and footer, bakes, visit information, and preorder and contact sections. Each stylesheet keeps its responsive rules beside the relevant styles.
-- `assets/` holds the food photos, favicon and WhatsApp icon.
+- `assets/` holds the food photos, including the 176 px WebP variants used by `srcset`, plus the favicon and WhatsApp icon.
+- `js/script.js` is a placeholder for the Applied JavaScript lessons. The current page runs with HTML and CSS and has no script reference.
+
+When updating a stylesheet with a `?v=` suffix in `index.html`, change that version value so browsers fetch the updated CSS. Fraunces uses `display=swap` and falls back to Georgia while it loads.
 
 ## Local preview
 
@@ -24,4 +27,8 @@ The preorder and contact forms are deferred until the JavaScript lessons. The [d
 
 AI helped with brainstorming, low-level Markdown formatting and wording, and assisted with HTML/CSS implementation, image optimization and checks. I owned the design decisions and final choices, directing and reviewing the work.
 
-See [notes](note.md), [decisions](decisions.md) and [audit](audit.md).
+## Documentation
+
+- [Starter-page diagnosis](diagnosis.md), [design notes](note.md), [decision log](decisions.md) and [initial self-audit](audit.md).
+- EE02 review of Ansah Frederick’s site. [Audit I wrote](docs/ee02/audit-of-ansah-frederick.md) and [testing log for his site](docs/ee02/testing-log.md).
+- EE02 review of this site. [Audit received from Ansah Frederick](https://github.com/AnsFredd/the-corner-loaf-redesign/blob/main/docs/ee02/audit-of-elvis-fosu.md) and [write-up of my fixes and further improvement](docs/ee02/write-up.md).

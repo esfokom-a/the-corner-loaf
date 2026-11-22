@@ -9,6 +9,14 @@ Ansah Frederick found no confirmed WCAG 2.2 Level AA violations in the checks of
 
 The four findings from my own peer review apply to Ansah’s version of the site. That version has the pre-order form where a whitespace-only submission clears the previous confirmation. My deployed site takes preorders through WhatsApp. [Finding 3 in the audit I wrote](audit-of-ansah-frederick.md#3-a-whitespace-only-submission-removes-the-previous-pre-order-confirmation)
 
+### Finding 1: The opening panel can disagree with the weekly schedule
+
+- **Reproduced before fixing:** The panel always said “Open today” and “Until 5 p.m.” The weekly schedule showed a 2 p.m. close on Saturday and Sunday as closed.
+- **Cause:** The opening panel uses a weekday example that stays the same until someone edits it.
+- **What I changed:** I kept the status and closing time at the top, labelled them as an example, and added a prompt to check the weekly schedule for today’s hours. [Opening panel](../../index.html#L54)
+- **Why this fixes the cause, not just the symptom:** People can still see what the panel is for at a glance. The label makes clear that the panel shows sample hours, and the link gives customers the published schedule. The example is maintained manually.
+- **How I verified it:** At 320 and 393 CSS px, Chrome’s accessibility tree exposed “Open today (example)” and the instruction to check the weekly schedule. Enter on “Opening hours” moved keyboard focus to the schedule, where Sunday was listed as closed.
+
 ### Finding 2: The focused skip link overlaps the page title
 
 - **Reproduced before fixing:** Yes. At 200% zoom in Chrome, the focused skip link overlapped the top of the title. It cleared the title at 100% in the desktop window tested. Enter still reached the main content.
@@ -17,13 +25,14 @@ The four findings from my own peer review apply to Ansah’s version of the site
 - **Why this fixes the cause, not just the symptom:** The focused link participates in the normal page layout. The header follows the link even when the width or zoom changes.
 - **How I verified it:** In Chrome, the first Tab showed the link above the title at 100% and 200% desktop zoom and at 393 CSS px in mobile emulation. Enter reached the main content at 200% and in the mobile preview.
 
+On a follow-up Chrome check at 320 × 568 and 393 × 300 CSS px, the skip link and both mobile menu links showed their full focus outlines. The accessibility tree exposed “Open navigation” and “Close navigation” as the menu link names.
+
 ## Issues I found myself
 
 - The “Menu today” list is maintained manually and can still show a bake after it sells out. I added a note and a link to the contact section so customers can check before visiting. In Chrome’s 393 CSS px preview, the note wrapped and I reached “Get in touch” using Tab and Enter. [My original audit](../../audit.md#decisions-and-rationale) · [Menu note](../../index.html#L67)
 
 ## Findings I did not fix, or disagree with
 
-- **Finding 1: Opening-hours wording.** I kept “Open today” and “Until 5 p.m.” near the top of the page. Customers passing the bakery can glance at their phone to see whether the shop is open and when it closes. The opening-hours link gives them the full schedule if they want to plan a visit. The status is maintained manually. It needs to reflect the current day, since the weekly schedule lists a 2 p.m. closing time on Saturday and shows Sunday as closed. [Opening panel](../../index.html#L54) · [Weekly schedule](../../index.html#L161)
 - **WAVE’s six possible-heading alerts on menu prices.** My Chrome WAVE check on the live site reproduced six alerts, zero errors, zero contrast errors, and an AIM score of 9.9/10. I confirmed that the six prices use paragraphs and the product names use headings. The prices keep their paragraph markup. [Peer review of the alerts](https://github.com/AnsFredd/the-corner-loaf-redesign/blob/main/docs/ee02/audit-of-elvis-fosu.md#wave-possible-heading-alerts--reviewed-not-a-heading-failure)
 
 ## Further improvement

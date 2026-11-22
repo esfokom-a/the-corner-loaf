@@ -14,7 +14,7 @@
   --color-whatsapp-hover: #095a2c;
   --font-heading: "Fraunces", Georgia, serif;
   --font-body: Arial, sans-serif;
-  --text-small: 0.875rem;
+  --text-small: 0.875rem; /* Secondary copy, such as the introduction and bake schedules. */
   --text-body: 1rem;
   --text-item: 1.125rem;
   --text-section: 1.5rem;
@@ -96,6 +96,7 @@ section {
   width: min(var(--content-width), calc(100% - 2 * var(--page-gutter)));
   margin-inline: auto;
 }
+/* The focused link enters normal flow above the header, keeping the title clear. */
 .skip-link {
   position: absolute;
   width: 1px;

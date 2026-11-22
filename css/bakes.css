@@ -1,5 +1,4 @@
-/* Mobile tiles: photo beside the name and price; description spans the card.
-   Two columns keep the price from squeezing the description into a narrow strip. */
+/* Stack the photo and copy when the card is too narrow for both at the chosen text size. */
 .product-list {
   display: flex;
   flex-direction: column;
@@ -9,8 +8,8 @@
   list-style: none;
 }
 .product {
-  display: grid;
-  grid-template-columns: 5.5rem minmax(0, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--space-20) var(--space-16);
   min-width: 0;
@@ -22,14 +21,19 @@
 }
 .product-image {
   display: block;
+  flex: none;
   width: 5.5rem;
-  height: 5.5rem;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1;
   object-fit: cover;
   border-radius: var(--radius-photo);
   background: var(--color-warm);
 }
 .product-copy {
+  flex: 1 1 8rem;
   min-width: 0;
+  overflow-wrap: anywhere;
 }
 .product-copy h3 {
   font-size: 1.125rem;
@@ -43,7 +47,7 @@
   font-variant-numeric: tabular-nums;
 }
 .product-description {
-  grid-column: 1 / -1;
+  flex-basis: 100%;
   margin: 0;
   padding-top: var(--space-16);
   border-top: 1px solid var(--color-border);
@@ -135,12 +139,12 @@
     flex-direction: row;
   }
   .product {
-    display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     flex: 1;
-    padding: var(--space-20);
   }
   .product-copy {
+    flex: none;
     width: 100%;
   }
   .product-image {

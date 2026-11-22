@@ -1,5 +1,5 @@
-/* Mobile: the fragment #navigation opens the menu; any section link closes it.
-   It expands in normal flow, so there is no modal focus trap or covered content. */
+/* On mobile, #navigation expands the menu in the page flow. Section links close
+   it by changing the fragment. Browser Back can reopen it by restoring #navigation. */
 .site-header {
   display: flex;
   flex-wrap: wrap;

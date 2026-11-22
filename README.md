@@ -11,7 +11,11 @@ A mobile-first bakery website built with HTML and CSS. Customers can browse Menu
 - `assets/` holds the food photos, including the 176 px WebP variants used by `srcset`, plus the favicon and WhatsApp icon.
 - `js/script.js` is a placeholder for the Applied JavaScript lessons. The current page runs with HTML and CSS and has no script reference.
 
-When updating a stylesheet with a `?v=` suffix in `index.html`, change that version value so browsers fetch the updated CSS. Fraunces uses `display=swap` and falls back to Georgia while it loads.
+Fraunces uses Google Fonts’ `display=swap` setting. Headings render in Georgia or the browser’s serif fallback while the web font loads.
+
+## Stylesheet caching
+
+When publishing a CSS change, update the edited stylesheet’s `?v=` value in `index.html` in the same commit. For example, change `css/bakes.css?v=ee02-layout` to `css/bakes.css?v=ee02-layout-2` after editing `css/bakes.css`. If the link has no version value yet, add one. The new URL tells browsers to fetch the updated CSS even if the previous version is cached.
 
 ## Local preview
 

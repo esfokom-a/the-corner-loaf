@@ -7,6 +7,8 @@
 
 Ansah Frederick found no confirmed WCAG 2.2 Level AA violations in the checks of my site. I numbered his two observations in the order they appear in the audit I received.
 
+The four findings from my own peer review apply to Ansah’s version of the site. That version has the pre-order form where a whitespace-only submission clears the previous confirmation. My deployed site takes preorders through WhatsApp. [Finding 3 in the audit I wrote](audit-of-ansah-frederick.md#3-a-whitespace-only-submission-removes-the-previous-pre-order-confirmation)
+
 ### Finding 2: The focused skip link overlaps the page title
 
 - **Reproduced before fixing:** Yes. At 200% zoom in Chrome, the focused skip link overlapped the top of the title. It cleared the title at 100% in the desktop window tested. Enter still reached the main content.

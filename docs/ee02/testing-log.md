@@ -30,7 +30,7 @@ Each entry records the location, observation and method. Screenshots are linked 
 - Pastries filter | Activating it from the keyboard updates the results and posts "Showing 3 pastry product listings in the weekly menu." | keyboard
 - FAQ | Enter and Space open the questions and update `aria-expanded` | keyboard
 - Mobile menu | Escape closes the menu | keyboard
-- Pre-order | An empty submit triggered native validation and moved focus to the name field. A valid test order displayed a confirmation. Submitting only spaces in both fields then replaced that confirmation and left focus on the submit button. The handler writes the error into `#preorder-list.textContent` | keyboard and source review. [Whitespace-only pre-order error](screenshots/09-preorder-whitespace-error-wipes-order.jpg)
+- Pre-order on Ansah’s site | An empty submit triggered native validation and moved focus to the name field. A valid test order displayed a confirmation. Submitting only spaces in both fields then replaced that confirmation and left focus on the submit button. The handler writes the error into `#preorder-list.textContent` | keyboard and source review. [Whitespace-only pre-order error](screenshots/09-preorder-whitespace-error-wipes-order.jpg)
 
 ### Zoom, text size and reflow (in-app browser viewport emulation)
 

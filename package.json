@@ -1,0 +1,18 @@
+{
+  "name": "the-corner-loaf",
+  "private": true,
+  "scripts": {
+    "lint": "eslint \"js/**/*.js\"",
+    "format": "prettier --write index.html \"css/**/*.css\" \"js/**/*.js\"",
+    "format:check": "prettier --check index.html \"css/**/*.css\" \"js/**/*.js\""
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.15.0",
+    "globals": "17.14.0",
+    "prettier": "3.10.1"
+  }
+}

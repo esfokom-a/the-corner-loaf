@@ -1,0 +1,140 @@
+/* On mobile, #navigation expands the menu in the page flow. Section links close
+   it by changing the fragment. Browser Back can reopen it by restoring #navigation. */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-24) var(--space-12);
+  padding-block: var(--space-24);
+}
+.bakery-intro {
+  flex: 1;
+  min-width: 0;
+}
+.intro-description {
+  max-width: 40ch;
+  margin-top: var(--space-12);
+  color: var(--color-muted);
+  font-size: var(--text-small);
+}
+.brand-rule {
+  width: 8rem;
+  height: 0.45rem;
+  border-top: 2px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
+  margin-top: var(--space-12);
+}
+.menu-toggle,
+.menu-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  color: var(--color-text);
+  background: var(--color-surface);
+  flex-shrink: 0;
+}
+.site-menu {
+  display: none;
+  width: calc(100% + 2 * var(--page-gutter));
+  margin-inline: calc(-1 * var(--page-gutter));
+  padding: var(--space-24);
+  background: var(--color-surface);
+}
+.site-menu:target {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+.menu-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-8);
+  flex: 1;
+  list-style: none;
+  padding: var(--space-24) 0;
+  margin: 0;
+}
+.nav-link {
+  display: block;
+  padding: var(--space-16) 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  margin-top: var(--space-32);
+  padding-block: var(--space-24);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: var(--text-small);
+}
+.site-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+/* Wide screens: a permanently visible navigation card, with no menu toggle. */
+@media (min-width: 48rem) {
+  .site-header {
+    padding-block: var(--space-32);
+  }
+  .bakery-intro {
+    flex-basis: 100%;
+  }
+  .intro-description {
+    max-width: none;
+  }
+  .menu-toggle,
+  .menu-heading {
+    display: none;
+  }
+  .site-menu,
+  .site-menu:target {
+    display: block;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: var(--space-8);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-panel);
+    box-shadow: var(--shadow-soft);
+  }
+  .nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: 0;
+  }
+  .nav-link {
+    padding: var(--space-12);
+    border: 0;
+    font: 700 0.875rem/1.5 var(--font-body);
+  }
+}

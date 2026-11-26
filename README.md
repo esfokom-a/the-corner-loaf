@@ -41,7 +41,9 @@ Existing site files may report formatting differences. Keep the initial formatti
 
 ## Git hooks
 
-Husky sets up the Git hooks during `npm ci`. The `pre-commit` hook runs `npm run lint`, so ESLint errors stop a commit even if a contributor forgets to run lint manually. The `commit-msg` hook checks that the first line uses an allowed type, a scope, and a subject as described in [AGENTS.md](AGENTS.md). That catches messages like `fix: correct opening hours` before they enter the history. Run `npm run format:check` separately because the existing formatting differences would block unrelated commits.
+Husky sets up the Git hooks during `npm ci`. The `pre-commit` hook runs `npm run lint:staged`, which uses lint-staged to run ESLint on staged JavaScript files in `js/`. When a file has both staged and unstaged edits, lint-staged temporarily hides the unstaged edits so ESLint sees what will be committed. Without that step, an unstaged fix could hide an error in the commit. Run `npm run lint` to check all browser scripts.
+
+The `commit-msg` hook checks that the first line uses an allowed type, a scope, and a subject as described in [AGENTS.md](AGENTS.md). That catches messages like `fix: correct opening hours` before they enter the history. Run `npm run format:check` separately because the existing formatting differences would block unrelated commits.
 
 On machines with AmaliTech-managed Git hooks, the managed `pre-commit` hook runs the repository's lint check. Automatic message validation there requires the managed hooks to forward `commit-msg`. To check a message file manually, run `node .husky/check-commit-message.mjs path/to/message.txt`.
 

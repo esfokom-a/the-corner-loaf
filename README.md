@@ -19,11 +19,16 @@ When publishing a CSS change, update the edited stylesheet’s `?v=` value in `i
 
 ## Local preview
 
-Open `index.html`, or run `python -m http.server 5500` and visit http://localhost:5500 for a local preview.
+Install Node.js 24 LTS, then run these commands from the repository root.
+
+```sh
+npm ci
+npx vite
+```
+
+Open the URL Vite prints in the terminal (usually http://localhost:5173).
 
 ## Linting and formatting
-
-Install Node.js 24 LTS and run `npm ci` from the repository root to install the shared development tools. The site opens directly in the browser.
 
 - `npm run lint` checks browser JavaScript in `js/` with ESLint's recommended rules.
 - `npm run format:check` checks the site's HTML, CSS, and JavaScript against Prettier's defaults.

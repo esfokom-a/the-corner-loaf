@@ -2,6 +2,7 @@
   "name": "the-corner-loaf",
   "private": true,
   "scripts": {
+    "prepare": "node .husky/install.mjs",
     "lint": "eslint \"js/**/*.js\"",
     "format": "prettier --write index.html \"css/**/*.css\" \"js/**/*.js\"",
     "format:check": "prettier --check index.html \"css/**/*.css\" \"js/**/*.js\""
@@ -13,6 +14,7 @@
     "@eslint/js": "10.0.1",
     "eslint": "10.15.0",
     "globals": "17.14.0",
+    "husky": "9.1.7",
     "prettier": "3.10.1",
     "vite": "^8.3.8"
   }

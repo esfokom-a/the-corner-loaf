@@ -39,6 +39,12 @@ Vite serves the site over HTTP and updates the preview as you edit. Opening `ind
 
 Existing site files may report formatting differences. Keep the initial formatting pass and future formatting-only changes in separate commits so reviewers can focus on behavior changes in a pull request. Commit `package-lock.json` when changing tool dependencies so contributors install the same versions.
 
+## Git hooks
+
+Husky sets up the Git hooks during `npm ci`. The `pre-commit` hook runs `npm run lint`, so ESLint errors stop a commit even if a contributor forgets to run lint manually. The `commit-msg` hook checks that the first line uses an allowed type, a scope, and a subject as described in [AGENTS.md](AGENTS.md). That catches messages like `fix: correct opening hours` before they enter the history. Run `npm run format:check` separately because the existing formatting differences would block unrelated commits.
+
+On machines with AmaliTech-managed Git hooks, the managed `pre-commit` hook runs the repository's lint check. Automatic message validation there requires the managed hooks to forward `commit-msg`. To check a message file manually, run `node .husky/check-commit-message.mjs path/to/message.txt`.
+
 ## Project notes
 
 Each **Order now** link opens a WhatsApp draft that names the bake and asks about collection. Customers send the message in WhatsApp to request an order.

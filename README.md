@@ -28,11 +28,14 @@ npx vite
 
 Open the URL Vite prints in the terminal (usually http://localhost:5173).
 
+`npm ci` installs the versions recorded in `package-lock.json`. Without that lockfile-based install, contributors can end up with different tool versions and get different lint or formatting results from the same files.
+
+Vite serves the site over HTTP and updates the preview as you edit. Opening `index.html` directly skips the HTTP requests the deployed site uses to load stylesheets and images, so the local preview would miss problems that only show up when the site is served.
+
 ## Linting and formatting
 
-- `npm run lint` checks browser JavaScript in `js/` with ESLint's recommended rules.
-- `npm run format:check` checks the site's HTML, CSS, and JavaScript against Prettier's defaults.
-- `npm run format` applies Prettier formatting to those files. To format a single file, run `npx prettier --write path/to/file`.
+- **ESLint** checks the browser scripts in `js/` when you run `npm run lint`. The config applies ESLint's recommended rules and recognizes browser globals such as `document`. If a script uses `documnt` by mistake, ESLint flags the undefined name. Without the check, the typo can reach the browser and throw a `ReferenceError` only when that code runs.
+- **Prettier** gives `index.html` and the files in `css/` and `js/` a consistent format. The empty `.prettierrc` uses Prettier's defaults. Without a shared formatter, contributors' editor settings can produce different indentation and line wrapping, making it harder to spot functional changes in a review. Run `npm run format:check` to detect differences or `npm run format` to apply the formatting. To format a single file, run `npx prettier --write path/to/file`.
 
 Existing site files may report formatting differences. Keep the initial formatting pass and future formatting-only changes in separate commits so reviewers can focus on behavior changes in a pull request. Commit `package-lock.json` when changing tool dependencies so contributors install the same versions.
 

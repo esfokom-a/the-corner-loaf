@@ -45,7 +45,7 @@ Husky sets up the Git hooks during `npm ci`. The `pre-commit` hook runs `npm run
 
 The `commit-msg` hook checks that the first line uses an allowed type, a scope, and a subject as described in the [commit message guide](CONTRIBUTING.md#commit-messages). That catches messages like `fix: correct opening hours` before they enter the history.
 
-GitHub Actions runs `npm run lint` and `npm run format:check` on pushes and on pull requests targeting `develop` or `main`.
+GitHub Actions runs `npm run lint` and `npm run format:check` on pushes and on pull requests targeting `develop` or `main`. It also checks that those pull requests follow the [title format](CONTRIBUTING.md#pull-requests).
 
 On machines with AmaliTech-managed Git hooks, the managed `pre-commit` hook runs the repository's lint check. Automatic message validation there requires the managed hooks to forward `commit-msg`. To check a message file manually, run `node .husky/check-commit-message.mjs path/to/message.txt`.
 

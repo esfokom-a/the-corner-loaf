@@ -48,7 +48,9 @@ address without retyping the enquiry.
 
 ## Pull requests
 
-Use a one-line title that summarizes the change, such as “Preserve enquiry details after validation.” In the description, explain what changed, why it was needed, how it was tested, and whether it introduces breaking changes. Link the related issue or ticket when one exists.
+Use a one-line title in the same `type(scope): subject` format as [commit messages](#commit-messages), such as `fix(contact): preserve enquiry details after validation`. GitHub Actions checks the title on pull requests targeting `develop` or `main` and reruns the check after edits.
+
+In the description, explain what changed, why it was needed, how it was tested, and whether it introduces breaking changes. Link the related issue or ticket when one exists.
 
 Review your own diff before requesting review. Run `npm run lint` and `npm run format:check`, add tests where they apply, and verify changed site behavior in a browser.
 

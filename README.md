@@ -39,6 +39,20 @@ Vite serves the site over HTTP and updates the preview as you edit. Opening `ind
 
 Existing site files may report formatting differences. Keep the initial formatting pass and future formatting-only changes in separate commits so reviewers can focus on behavior changes in a pull request. Commit `package-lock.json` when changing tool dependencies so contributors install the same versions.
 
+## Accessibility checks
+
+From the repository root, install the dependencies and Playwright's Chromium browser, then run the suite.
+
+```sh
+npm ci
+npx playwright install chromium
+npm run test:a11y
+```
+
+On Linux, use `npx playwright install --with-deps chromium` if the browser needs system libraries. Playwright starts Vite on `127.0.0.1:4173` for the tests.
+
+The suite runs axe scans for automatically detectable WCAG 2.1 A and AA violations on the desktop homepage, the mobile homepage with navigation open, and the mobile homepage with a preorder FAQ expanded. GitHub Actions runs the same suite in its **Accessibility** job on pushes and on pull requests targeting `develop` or `main`. A failed scan lists the axe rule, affected selectors, and details in the job log. Continue to test with a keyboard and screen reader during review.
+
 ## Git hooks
 
 Husky sets up the Git hooks during `npm ci`. The `pre-commit` hook runs `npm run lint:staged`, which uses lint-staged to run ESLint on staged JavaScript files in `js/`. When a file has both staged and unstaged edits, lint-staged temporarily hides the unstaged edits so ESLint sees what will be committed. Without that step, an unstaged fix could hide an error in the commit. Run `npm run lint` to check all browser scripts.

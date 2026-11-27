@@ -29,7 +29,7 @@ On a follow-up Chrome check at 320 × 568 and 393 × 300 CSS px, the skip link a
 
 ## Issues I found myself
 
-- The “Menu today” list is maintained manually and can still show a bake after it sells out. I added a note and a link to the contact section so customers can check before visiting. In Chrome’s 393 CSS px preview, the note wrapped and I reached “Get in touch” using Tab and Enter. [My original audit](../../audit.md#decisions-and-rationale) · [Menu note](../../index.html#L67)
+- The “Menu today” list is maintained manually and can still show a bake after it sells out. I added a note and a link to the contact section so customers can check before visiting. In Chrome’s 393 CSS px preview, the note wrapped and I reached “Get in touch” using Tab and Enter. [My original audit](../ee01/audit.md#decisions-and-rationale) · [Menu note](../../index.html#L67)
 
 ## Findings I did not fix, or disagree with
 

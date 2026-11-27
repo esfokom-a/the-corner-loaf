@@ -55,12 +55,12 @@ Each **Order now** link opens a WhatsApp draft that names the bake and asks abou
 
 The **How to order and pick up** guide gives first-time customers three short steps before they open WhatsApp. It explains what to send at least one day ahead, when to wait for confirmation, and where to collect the order. The [EE02 write-up](docs/ee02/write-up.md#further-improvement) explains who it helps and how it was tested.
 
-The live site handles preorders through WhatsApp and enquiries through WhatsApp or email. The forms in the [initial self-audit](audit.md) were part of an earlier prototype. The [decision log](decisions.md#forms-to-restore-in-the-javascript-lessons) records what to restore during the JavaScript lessons.
+The live site handles preorders through WhatsApp and enquiries through WhatsApp or email. The forms in the [initial self-audit](docs/ee01/audit.md) were part of an earlier prototype. The [decision log](docs/ee01/decisions.md#forms-to-restore-in-the-javascript-lessons) records what to restore during the JavaScript lessons.
 
 AI helped with brainstorming, low-level Markdown formatting and wording, and assisted with HTML/CSS implementation, image optimization and checks. I owned the design decisions and final choices, directing and reviewing the work.
 
 ## Documentation
 
-- [Starter-page diagnosis](diagnosis.md), [design notes](note.md), [decision log](decisions.md) and [initial self-audit](audit.md).
+- [Starter-page diagnosis](docs/ee01/diagnosis.md), [design notes](docs/ee01/note.md), [decision log](docs/ee01/decisions.md) and [initial self-audit](docs/ee01/audit.md).
 - EE02 review of Ansah Frederick’s site. [Audit I wrote](docs/ee02/audit-of-ansah-frederick.md) and [testing log for his site](docs/ee02/testing-log.md).
 - EE02 review of this site. [Audit received from Ansah Frederick](https://github.com/AnsFredd/the-corner-loaf-redesign/blob/main/docs/ee02/audit-of-elvis-fosu.md) and [write-up of my fixes and further improvement](docs/ee02/write-up.md).

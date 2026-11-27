@@ -14,11 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&display=swap"
       rel="stylesheet"
     />
-    <link href="css/styles.css?v=ee02-layout" rel="stylesheet" />
-    <link href="css/header-footer.css?v=ee03-footer" rel="stylesheet" />
+    <link href="css/styles.css?v=ee03-footer-colors" rel="stylesheet" />
+    <link href="css/header-footer.css?v=ee03-footer-icons" rel="stylesheet" />
     <link href="css/bakes.css?v=ee02-layout" rel="stylesheet" />
     <link href="css/visit.css?v=ee03-opening-hours-layout" rel="stylesheet" />
-    <link href="css/preorder-contact.css?v=ee02-preorder" rel="stylesheet" />
+    <link href="css/preorder-contact.css?v=ee03-footer" rel="stylesheet" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   </head>
   <body id="top">
@@ -426,29 +426,6 @@
           shortcuts. Just bread, pastries and a neighbourhood shop to stop by.
         </p>
       </section>
-
-      <section
-        tabindex="-1"
-        id="contact"
-        class="section contact-panel"
-        aria-labelledby="contact-heading"
-      >
-        <h2 id="contact-heading">Get in touch</h2>
-        <address class="contact-details">
-          <p>
-            <a class="whatsapp-button" href="https://wa.me/233551000000">
-              <img src="assets/whatsapp.svg" width="20" height="20" alt="" />
-              Chat on WhatsApp
-            </a>
-          </p>
-          <p>
-            Email:
-            <a class="contact-email" href="mailto:thecornerloaf@email.com"
-              >thecornerloaf@email.com</a
-            >
-          </p>
-        </address>
-      </section>
     </main>
 
     <footer class="site-footer container">
@@ -461,16 +438,8 @@
             The Corner Loaf
           </h2>
 
-          <p class="footer-tagline">Handmade in Accra.</p>
-
           <p class="footer-description">
-            Freshly baked bread and pastries, made by hand in small batches.
-            From our signature sourdough to your favourite sweet treats,
-            everything is prepared with care by Marcus.
-          </p>
-
-          <p class="footer-location">
-            Your neighbourhood bakery in East Legon, Accra.
+            Small-batch bread and pastries made by Marcus in East Legon.
           </p>
         </section>
 
@@ -479,28 +448,32 @@
 
           <ul class="footer-link-list">
             <li><a href="#bakes">Menu today</a></li>
-            <li><a href="#visit">Location &amp; hours</a></li>
-            <li><a href="#faq">Preorder FAQs</a></li>
             <li><a href="#preorder">Preorder</a></li>
+            <li><a href="#faq">Preorder FAQs</a></li>
             <li><a href="#about">About Marcus</a></li>
+            <li><a href="#visit">Location &amp; hours</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
         <section
+          id="contact"
           class="footer-section"
           aria-labelledby="footer-contact-heading"
+          tabindex="-1"
         >
-          <h2 class="footer-heading" id="footer-contact-heading">Contact</h2>
+          <h2 class="footer-heading" id="footer-contact-heading">
+            Get in touch
+          </h2>
 
           <div class="footer-contact-icons">
             <a
               class="footer-icon-button"
               href="https://wa.me/233551000000"
-              aria-label="Contact us on WhatsApp"
+              aria-label="Chat on WhatsApp"
               title="WhatsApp"
             >
-              <img src="assets/whatsapp.svg" alt="" width="26" height="26" />
+              <img src="assets/whatsapp.svg" alt="" width="20" height="20" />
             </a>
 
             <a
@@ -543,8 +516,8 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 The Corner Loaf. All rights reserved.</p>
-        <a href="#top">Back to top ↑</a>
+        <p>&copy; 2026 The Corner Loaf · Handmade in Accra.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
       </div>
     </footer>
   </body>

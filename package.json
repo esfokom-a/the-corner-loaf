@@ -6,7 +6,8 @@
     "lint": "eslint \"js/**/*.js\"",
     "lint:staged": "lint-staged",
     "format": "prettier --write index.html \"css/**/*.css\" \"js/**/*.js\"",
-    "format:check": "prettier --check index.html \"css/**/*.css\" \"js/**/*.js\""
+    "format:check": "prettier --check index.html \"css/**/*.css\" \"js/**/*.js\"",
+    "test:a11y": "playwright test"
   },
   "lint-staged": {
     "js/**/*.js": "eslint"
@@ -15,7 +16,9 @@
     "node": "^20.19.0 || ^22.13.0 || >=24"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.14.1",
     "@eslint/js": "10.0.1",
+    "@playwright/test": "1.65.1",
     "eslint": "10.15.0",
     "globals": "17.14.0",
     "husky": "9.1.7",

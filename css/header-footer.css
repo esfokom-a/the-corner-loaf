@@ -97,7 +97,7 @@
   position: relative;
   margin-top: var(--space-32);
   padding: var(--space-32) var(--space-24) var(--space-24);
-  border: 0;
+  border: 0.375rem solid var(--color-footer-border);
   border-radius: var(--radius-panel);
   background: var(--color-footer-background);
   color: var(--color-footer-text);
@@ -151,11 +151,6 @@
   line-height: var(--leading-body);
 }
 
-.footer-location {
-  color: var(--color-footer-highlight);
-  font-weight: 600;
-}
-
 .footer-link-list,
 .footer-contact {
   margin: 0;
@@ -179,7 +174,7 @@
 }
 
 .footer-link-list a:hover {
-  color: var(--color-accent);
+  text-decoration-thickness: 0.15em;
   text-decoration: underline;
 }
 
@@ -262,7 +257,7 @@
 }
 
 .footer-directions-link:hover {
-  color: var(--color-accent);
+  text-decoration-thickness: 0.15em;
 }
 
 .footer-bottom {
@@ -273,7 +268,7 @@
   gap: var(--space-8) var(--space-16);
   margin-top: var(--space-24);
   padding-top: var(--space-16);
-  border-top: 1px solid var(--color-footer-border);
+  border-top: 1px solid var(--color-footer-divider);
 }
 
 .footer-bottom p {
@@ -288,10 +283,10 @@
 }
 
 .footer-bottom a:hover {
-  color: var(--color-accent);
+  text-decoration-thickness: 0.15em;
 }
 
-.site-footer a:focus-visible {
+.site-footer :focus-visible {
   outline: 2px solid var(--color-footer-highlight);
   outline-offset: 4px;
 }

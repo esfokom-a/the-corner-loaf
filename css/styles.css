@@ -10,11 +10,11 @@
   --color-text: #38271e;
   --color-muted: #6e584b;
   --color-border: #d8c5b2;
-  --color-footer-background: #3b2418;
-  --color-footer-text: #f3e3cf;
-  --color-footer-highlight: #fff5e8;
-  --color-footer-border: rgba(243, 227, 207, 0.25);
-  --color-footer-divider: rgba(243, 227, 207, 0.2);
+  --color-footer-background: var(--color-accent);
+  --color-footer-text: var(--color-page);
+  --color-footer-highlight: #fff;
+  --color-footer-border: var(--color-warm);
+  --color-footer-divider: var(--color-footer-highlight);
   --color-open: #35613f;
   --color-whatsapp: #0d7038;
   --color-whatsapp-hover: #095a2c;

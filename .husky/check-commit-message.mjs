@@ -8,7 +8,7 @@ const match =
 
 if (!match || !match[2].trim() || !match[3].trim()) {
   console.error(
-    "Use a commit message in the form type(scope): subject. See AGENTS.md.",
+    "Use a commit message in the form type(scope): subject. See CONTRIBUTING.md#commit-messages.",
   );
   console.error("Example: chore(tooling): add Git hooks");
   process.exitCode = 1;

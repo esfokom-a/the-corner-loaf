@@ -43,7 +43,7 @@ Existing site files may report formatting differences. Keep the initial formatti
 
 Husky sets up the Git hooks during `npm ci`. The `pre-commit` hook runs `npm run lint:staged`, which uses lint-staged to run ESLint on staged JavaScript files in `js/`. When a file has both staged and unstaged edits, lint-staged temporarily hides the unstaged edits so ESLint sees what will be committed. Without that step, an unstaged fix could hide an error in the commit. Run `npm run lint` to check all browser scripts.
 
-The `commit-msg` hook checks that the first line uses an allowed type, a scope, and a subject as described in [AGENTS.md](AGENTS.md). That catches messages like `fix: correct opening hours` before they enter the history.
+The `commit-msg` hook checks that the first line uses an allowed type, a scope, and a subject as described in the [commit message guide](CONTRIBUTING.md#commit-messages). That catches messages like `fix: correct opening hours` before they enter the history.
 
 GitHub Actions runs `npm run lint` and `npm run format:check` on pushes and on pull requests targeting `develop` or `main`.
 
@@ -61,6 +61,7 @@ AI helped with brainstorming, low-level Markdown formatting and wording, and ass
 
 ## Documentation
 
+- [EE03 team conventions for contributors](CONTRIBUTING.md).
 - [Starter-page diagnosis](docs/ee01/diagnosis.md), [design notes](docs/ee01/note.md), [decision log](docs/ee01/decisions.md) and [initial self-audit](docs/ee01/audit.md).
 - EE02 review of Ansah Frederick’s site. [Audit I wrote](docs/ee02/audit-of-ansah-frederick.md) and [testing log for his site](docs/ee02/testing-log.md).
 - EE02 review of this site. [Audit received from Ansah Frederick](https://github.com/AnsFredd/the-corner-loaf-redesign/blob/main/docs/ee02/audit-of-elvis-fosu.md) and [write-up of my fixes and further improvement](docs/ee02/write-up.md).

@@ -198,17 +198,17 @@
 
 .footer-contact-icons {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--space-12);
 }
 
 .footer-icon-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  min-height: 1.75rem;
+  width: 2.75rem;
+  height: 2.75rem;
   padding: 0;
   border: 1px solid var(--color-footer-highlight);
   border-radius: 50%;
@@ -217,15 +217,15 @@
   text-decoration: none;
 }
 
-.site-footer .footer-icon-button {
-  min-height: 1.75rem;
+.footer-icon-button:hover {
+  background: var(--color-text);
 }
 
 .footer-icon-button img,
 .footer-icon-button svg {
   display: block;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
   flex-shrink: 0;
   visibility: visible;
   opacity: 1;
@@ -277,6 +277,7 @@
 }
 
 .footer-bottom a {
+  gap: var(--space-4);
   color: var(--color-footer-highlight);
   text-decoration: underline;
   text-underline-offset: 3px;

@@ -1,226 +1,524 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Small-batch bread and pastries by Marcus at The Corner Loaf, Boundary Road, East Legon, Accra. See our bake schedule, prices and opening hours.">
-  <title>The Corner Loaf | Your neighbourhood bakery in East Legon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&display=swap" rel="stylesheet">
-  <link href="css/styles.css?v=ee02-layout" rel="stylesheet">
-  <link href="css/header-footer.css" rel="stylesheet">
-  <link href="css/bakes.css?v=ee02-layout" rel="stylesheet">
-  <link href="css/visit.css" rel="stylesheet">
-  <link href="css/preorder-contact.css?v=ee02-preorder" rel="stylesheet">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-</head>
-<body id="top">
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Small-batch bread and pastries by Marcus at The Corner Loaf, Boundary Road, East Legon, Accra. See our bake schedule, prices and opening hours."
+    />
+    <title>The Corner Loaf | Your neighbourhood bakery in East Legon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css?v=ee03-footer-colors" rel="stylesheet" />
+    <link href="css/header-footer.css?v=ee03-footer-icons" rel="stylesheet" />
+    <link href="css/bakes.css?v=ee02-layout" rel="stylesheet" />
+    <link href="css/visit.css?v=ee03-opening-hours-layout" rel="stylesheet" />
+    <link href="css/preorder-contact.css?v=ee03-footer" rel="stylesheet" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header container">
-    <div class="bakery-intro">
-      <p class="eyebrow">Small batches. Made by Marcus.</p>
-      <h1>The Corner Loaf</h1>
-      <div class="brand-rule" aria-hidden="true"></div>
-      <p class="intro-description">Your neighbourhood bakery on Boundary Road, East Legon, Accra.</p>
-    </div>
-    <!-- The open and close links carry the accessible names for their decorative icons. -->
-    <a class="menu-toggle" href="#navigation" aria-label="Open navigation" aria-controls="navigation">
-      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-    </a>
-    <nav id="navigation" class="site-menu" aria-label="Main navigation" tabindex="-1">
-      <div class="menu-heading">
-        <p class="eyebrow">The Corner Loaf / Explore</p>
-        <a class="menu-close" href="#top" aria-label="Close navigation">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg>
-        </a>
+    <header class="site-header container">
+      <div class="bakery-intro">
+        <p class="eyebrow">Small batches. Made by Marcus.</p>
+        <h1>The Corner Loaf</h1>
+        <div class="brand-rule" aria-hidden="true"></div>
+        <p class="intro-description">
+          Your neighbourhood bakery on Boundary Road, East Legon, Accra.
+        </p>
       </div>
-      <ul class="nav-list">
-        <li><a class="nav-link" href="#bakes">Menu today</a></li>
-        <li><a class="nav-link" href="#visit">Location &amp; hours</a></li>
-        <li><a class="nav-link" href="#faq">Preorder FAQs</a></li>
-        <li><a class="nav-link" href="#preorder">Preorder</a></li>
-        <li><a class="nav-link" href="#about">About Marcus</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+      <!-- The open and close links carry the accessible names for their decorative icons. -->
+      <a
+        class="menu-toggle"
+        href="#navigation"
+        aria-label="Open navigation"
+        aria-controls="navigation"
+      >
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </a>
+      <nav
+        id="navigation"
+        class="site-menu"
+        aria-label="Main navigation"
+        tabindex="-1"
+      >
+        <div class="menu-heading">
+          <p class="eyebrow">The Corner Loaf / Explore</p>
+          <a class="menu-close" href="#top" aria-label="Close navigation">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m5 5 14 14M19 5 5 19" />
+            </svg>
+          </a>
+        </div>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#bakes">Menu today</a></li>
+          <li><a class="nav-link" href="#visit">Location &amp; hours</a></li>
+          <li><a class="nav-link" href="#faq">Preorder FAQs</a></li>
+          <li><a class="nav-link" href="#preorder">Preorder</a></li>
+          <li><a class="nav-link" href="#about">About Marcus</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- Contact number: 233551000000. Keep it consistent in every wa.me link. -->
-  <main id="main" class="container" tabindex="-1">
-    <!-- Update the opening status and example bakes manually. The status text carries
-         the opening information; the coloured dot is decorative. -->
-    <section class="opening-panel" aria-labelledby="opening-heading">
-      <span class="status-dot status-dot-open" aria-hidden="true"></span>
-      <div>
-        <h2 id="opening-heading">Open today <small>(example)</small></h2>
-        <p class="status-detail">Until 5 p.m. Check the weekly schedule for today’s hours.</p>
-      </div>
-      <a class="status-link" href="#visit">Opening hours <span aria-hidden="true">&darr;</span></a>
-    </section>
+    <!-- Contact number: 233551000000. Keep it consistent in every wa.me link. -->
+    <main id="main" class="container" tabindex="-1">
+      <!-- Update the opening status manually. The status text carries the opening
+         information; the coloured dot is decorative. -->
+      <section class="opening-panel" aria-labelledby="opening-heading">
+        <span class="status-dot status-dot-open" aria-hidden="true"></span>
+        <div>
+          <h2 id="opening-heading">Open today</h2>
+          <p class="status-detail">
+            Until 5 p.m. Check the weekly schedule for today’s hours.
+          </p>
+        </div>
+        <a class="status-link" href="#visit"
+          >Opening hours <span aria-hidden="true">&darr;</span></a
+        >
+      </section>
 
-    <section tabindex="-1" id="bakes" class="section" aria-labelledby="bakes-heading">
-      <div class="section-heading">
-        <p class="eyebrow">Our small-batch staples</p>
-        <h2 id="bakes-heading">Menu today</h2>
-        <p class="section-description">Stock can change during the day. <a href="#contact">Contact us to check availability</a> before you visit.</p>
-      </div>
-      <ul class="product-list">
-        <li class="product" id="bake-sourdough">
-          <img class="product-image" src="assets/sourdough-loaf.webp" srcset="assets/sourdough-loaf-small.webp 176w, assets/sourdough-loaf.webp 640w" sizes="(min-width: 48rem) 33vw, 88px" alt="Round sourdough loaf with a golden, scored crust" width="640" height="640" decoding="async">
-          <div class="product-copy">
-            <h3>Sourdough Loaf</h3>
-            <p class="product-price">GH&#8373; 35.00</p>
-          </div>
-          <div class="product-description">
-            <p>Crusty, soft and chewy.</p>
-            <details class="product-more">
-              <summary aria-label="Read more about Sourdough Loaf">Read more</summary>
-              <p class="product-full-description">Long-fermented for a classic sourdough flavour. Slice it for toast, serve it alongside soup, or enjoy it simply with butter.</p>
-            </details>
-            <a class="product-order" href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Sourdough%20Loaf%20for%20collection%20today.%20Is%20it%20available%3F" aria-label="Order now: Sourdough Loaf on WhatsApp">Order now <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </li>
-        <li class="product">
-          <img class="product-image" src="assets/whole-wheat-loaf.webp" srcset="assets/whole-wheat-loaf-small.webp 176w, assets/whole-wheat-loaf.webp 554w" sizes="(min-width: 48rem) 33vw, 88px" alt="Whole wheat loaf on a wooden board" width="554" height="554" decoding="async">
-          <div class="product-copy">
-            <h3>Whole Wheat Loaf</h3>
-            <p class="product-price">GH&#8373; 28.00</p>
-          </div>
-          <div class="product-description">
-            <p>Hearty with a nutty flavour.</p>
-            <details class="product-more">
-              <summary aria-label="Read more about Whole Wheat Loaf">Read more</summary>
-              <p class="product-full-description">Made with whole wheat for a dense, satisfying crumb. A good choice for breakfast toast, generous sandwiches, or a slice with your favourite spread.</p>
-            </details>
-            <a class="product-order" href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Whole%20Wheat%20Loaf%20for%20collection%20today.%20Is%20it%20available%3F" aria-label="Order now: Whole Wheat Loaf on WhatsApp">Order now <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </li>
-        <li class="product">
-          <img class="product-image" src="assets/chin-chin.webp" srcset="assets/chin-chin-small.webp 176w, assets/chin-chin.webp 500w" sizes="(min-width: 48rem) 33vw, 88px" alt="Golden chin chin pieces in a glass bowl" width="500" height="500" decoding="async">
-          <div class="product-copy">
-            <h3>Chin Chin</h3>
-            <p class="product-price">GH&#8373; 20.00</p>
-          </div>
-          <div class="product-description">
-            <p>Crunchy, lightly sweet bites.</p>
-            <details class="product-more">
-              <summary aria-label="Read more about Chin Chin">Read more</summary>
-              <p class="product-full-description">Enjoy a handful with tea or coffee, share a bag with friends, or keep some close for an afternoon snack. Each bag contains 200g.</p>
-            </details>
-            <a class="product-order" href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Chin%20Chin%20for%20collection%20today.%20Is%20it%20available%3F" aria-label="Order now: Chin Chin on WhatsApp">Order now <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </li>
-      </ul>
-      <details class="other-bakes">
-        <summary>Our other bakes</summary>
-        <p class="other-bakes-note">Baked on selected days. Message us to arrange your next collection.</p>
-        <ul class="other-bakes-list">
-          <li class="other-bake">
-            <div class="other-bake-heading">
-              <h3>Butter Croissants</h3>
-              <p class="other-bake-price">GH&#8373; 18.00</p>
+      <section
+        tabindex="-1"
+        id="bakes"
+        class="section"
+        aria-labelledby="bakes-heading"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">Our small-batch staples</p>
+          <h2 id="bakes-heading">Menu today</h2>
+          <p class="section-description">
+            Stock can change during the day.
+            <a href="#contact">Contact us to check availability</a> before you
+            visit.
+          </p>
+        </div>
+        <ul class="product-list">
+          <li class="product" id="bake-sourdough">
+            <img
+              class="product-image"
+              src="assets/sourdough-loaf.webp"
+              srcset="
+                assets/sourdough-loaf-small.webp 176w,
+                assets/sourdough-loaf.webp       640w
+              "
+              sizes="(min-width: 48rem) 33vw, 88px"
+              alt="Round sourdough loaf with a golden, scored crust"
+              width="640"
+              height="640"
+              decoding="async"
+            />
+            <div class="product-copy">
+              <h3>Sourdough Loaf</h3>
+              <p class="product-price">GH&#8373; 35.00</p>
             </div>
-            <p class="bake-schedule">Usually baked: Saturday mornings</p>
-            <p class="other-bake-description">Buttery, flaky croissants, baked in the morning only.</p>
-            <a class="product-order" href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Butter%20Croissants%20for%20your%20next%20bake.%20When%20can%20I%20collect%20it%3F" aria-label="Order now: Butter Croissants on WhatsApp">Order now <span aria-hidden="true">&rarr;</span></a>
+            <div class="product-description">
+              <p>Crusty, soft and chewy.</p>
+              <details class="product-more">
+                <summary aria-label="Read more about Sourdough Loaf">
+                  Read more
+                </summary>
+                <p class="product-full-description">
+                  Long-fermented for a classic sourdough flavour. Slice it for
+                  toast, serve it alongside soup, or enjoy it simply with
+                  butter.
+                </p>
+              </details>
+              <a
+                class="product-order"
+                href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Sourdough%20Loaf%20for%20collection%20today.%20Is%20it%20available%3F"
+                aria-label="Order now: Sourdough Loaf on WhatsApp"
+                >Order now <span aria-hidden="true">&rarr;</span></a
+              >
+            </div>
           </li>
-          <li class="other-bake">
-            <div class="other-bake-heading">
-              <h3>Banana Bread</h3>
-              <p class="other-bake-price">GH&#8373; 15.00</p>
+          <li class="product">
+            <img
+              class="product-image"
+              src="assets/whole-wheat-loaf.webp"
+              srcset="
+                assets/whole-wheat-loaf-small.webp 176w,
+                assets/whole-wheat-loaf.webp       554w
+              "
+              sizes="(min-width: 48rem) 33vw, 88px"
+              alt="Whole wheat loaf on a wooden board"
+              width="554"
+              height="554"
+              decoding="async"
+            />
+            <div class="product-copy">
+              <h3>Whole Wheat Loaf</h3>
+              <p class="product-price">GH&#8373; 28.00</p>
             </div>
-            <p class="bake-schedule">Usually baked: Thursday &amp; Saturday</p>
-            <p class="other-bake-description">Moist banana bread with a light sweetness. Price shown is for one slice.</p>
-            <a class="product-order" href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Banana%20Bread%20for%20your%20next%20bake.%20When%20can%20I%20collect%20it%3F" aria-label="Order now: Banana Bread on WhatsApp">Order now <span aria-hidden="true">&rarr;</span></a>
+            <div class="product-description">
+              <p>Hearty with a nutty flavour.</p>
+              <details class="product-more">
+                <summary aria-label="Read more about Whole Wheat Loaf">
+                  Read more
+                </summary>
+                <p class="product-full-description">
+                  Made with whole wheat for a dense, satisfying crumb. A good
+                  choice for breakfast toast, generous sandwiches, or a slice
+                  with your favourite spread.
+                </p>
+              </details>
+              <a
+                class="product-order"
+                href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Whole%20Wheat%20Loaf%20for%20collection%20today.%20Is%20it%20available%3F"
+                aria-label="Order now: Whole Wheat Loaf on WhatsApp"
+                >Order now <span aria-hidden="true">&rarr;</span></a
+              >
+            </div>
           </li>
-          <li class="other-bake">
-            <div class="other-bake-heading">
-              <h3>Meat Pies</h3>
-              <p class="other-bake-price">GH&#8373; 12.00</p>
+          <li class="product">
+            <img
+              class="product-image"
+              src="assets/chin-chin.webp"
+              srcset="
+                assets/chin-chin-small.webp 176w,
+                assets/chin-chin.webp       500w
+              "
+              sizes="(min-width: 48rem) 33vw, 88px"
+              alt="Golden chin chin pieces in a glass bowl"
+              width="500"
+              height="500"
+              decoding="async"
+            />
+            <div class="product-copy">
+              <h3>Chin Chin</h3>
+              <p class="product-price">GH&#8373; 20.00</p>
             </div>
-            <p class="bake-schedule">Usually baked: Wednesday &amp; Friday</p>
-            <p class="other-bake-description">Short-crust pastry filled with spiced minced meat and vegetables.</p>
-            <a class="product-order" href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Meat%20Pies%20for%20your%20next%20bake.%20When%20can%20I%20collect%20it%3F" aria-label="Order now: Meat Pies on WhatsApp">Order now <span aria-hidden="true">&rarr;</span></a>
+            <div class="product-description">
+              <p>Crunchy, lightly sweet bites.</p>
+              <details class="product-more">
+                <summary aria-label="Read more about Chin Chin">
+                  Read more
+                </summary>
+                <p class="product-full-description">
+                  Enjoy a handful with tea or coffee, share a bag with friends,
+                  or keep some close for an afternoon snack. Each bag contains
+                  200g.
+                </p>
+              </details>
+              <a
+                class="product-order"
+                href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Chin%20Chin%20for%20collection%20today.%20Is%20it%20available%3F"
+                aria-label="Order now: Chin Chin on WhatsApp"
+                >Order now <span aria-hidden="true">&rarr;</span></a
+              >
+            </div>
           </li>
         </ul>
-      </details>
-    </section>
-
-    <section id="visit" class="visit-panel section" aria-labelledby="visit-heading" tabindex="-1">
-      <div class="visit-address">
-        <p class="eyebrow">Location &amp; hours</p>
-        <h2 id="visit-heading">Visit the bakery</h2>
-        <address>17 Boundary Road<br>East Legon, Accra</address>
-        <a class="directions-link" href="https://www.google.com/maps/search/?api=1&amp;query=17%20Boundary%20Road%2C%20East%20Legon%2C%20Accra">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          Get directions
-        </a>
-      </div>
-      <dl class="hours-list">
-        <div class="hours-row"><dt>Monday&ndash;Friday</dt><dd>7am&ndash;5pm</dd></div>
-        <div class="hours-row"><dt>Saturday</dt><dd>7am&ndash;2pm</dd></div>
-        <div class="hours-row"><dt>Sunday</dt><dd>Closed</dd></div>
-      </dl>
-    </section>
-
-    <section tabindex="-1" id="faq" class="section" aria-labelledby="faq-heading">
-      <div class="section-heading"><p class="eyebrow">A few things to know</p><h2 id="faq-heading">Preorder questions</h2><p class="section-description">Planning ahead? Here's how collection and ordering work.</p></div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>How far in advance do I need to order?</summary>
-          <div class="faq-body"><p>We ask for at least one day's notice before your chosen collection day. For large orders or custom items, two to three days is better. This gives us time to plan our bake and make sure everything is ready for you.</p></div>
+        <details class="other-bakes">
+          <summary>Our other bakes</summary>
+          <p class="other-bakes-note">
+            Baked on selected days. Message us to arrange your next collection.
+          </p>
+          <ul class="other-bakes-list">
+            <li class="other-bake">
+              <div class="other-bake-heading">
+                <h3>Butter Croissants</h3>
+                <p class="other-bake-price">GH&#8373; 18.00</p>
+              </div>
+              <p class="bake-schedule">Usually baked: Saturday mornings</p>
+              <p class="other-bake-description">
+                Buttery, flaky croissants, baked in the morning only.
+              </p>
+              <a
+                class="product-order"
+                href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Butter%20Croissants%20for%20your%20next%20bake.%20When%20can%20I%20collect%20it%3F"
+                aria-label="Order now: Butter Croissants on WhatsApp"
+                >Order now <span aria-hidden="true">&rarr;</span></a
+              >
+            </li>
+            <li class="other-bake">
+              <div class="other-bake-heading">
+                <h3>Banana Bread</h3>
+                <p class="other-bake-price">GH&#8373; 15.00</p>
+              </div>
+              <p class="bake-schedule">
+                Usually baked: Thursday &amp; Saturday
+              </p>
+              <p class="other-bake-description">
+                Moist banana bread with a light sweetness. Price shown is for
+                one slice.
+              </p>
+              <a
+                class="product-order"
+                href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Banana%20Bread%20for%20your%20next%20bake.%20When%20can%20I%20collect%20it%3F"
+                aria-label="Order now: Banana Bread on WhatsApp"
+                >Order now <span aria-hidden="true">&rarr;</span></a
+              >
+            </li>
+            <li class="other-bake">
+              <div class="other-bake-heading">
+                <h3>Meat Pies</h3>
+                <p class="other-bake-price">GH&#8373; 12.00</p>
+              </div>
+              <p class="bake-schedule">Usually baked: Wednesday &amp; Friday</p>
+              <p class="other-bake-description">
+                Short-crust pastry filled with spiced minced meat and
+                vegetables.
+              </p>
+              <a
+                class="product-order"
+                href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20order%20Meat%20Pies%20for%20your%20next%20bake.%20When%20can%20I%20collect%20it%3F"
+                aria-label="Order now: Meat Pies on WhatsApp"
+                >Order now <span aria-hidden="true">&rarr;</span></a
+              >
+            </li>
+          </ul>
         </details>
-        <details class="faq-item">
-          <summary>How do I collect my order?</summary>
-          <div class="faq-body"><p>Come to the bakery at your agreed collection time. We will have your order bagged and labelled. If you are running late, let us know — we can usually hold orders for up to two hours after the agreed time.</p></div>
-        </details>
-        <details class="faq-item">
-          <summary>Can I cancel or change my order?</summary>
-          <div class="faq-body"><p>Yes, but please let us know as early as possible. If we have already started baking your order, we may not be able to cancel it. Changes to quantity are usually fine if you give us a day's notice.</p></div>
-        </details>
-        <details class="faq-item">
-          <summary>Do you deliver?</summary>
-          <div class="faq-body"><p>We do not currently offer delivery. All orders must be collected from the bakery in person. We are looking at delivery options for the future — follow us on Instagram to hear when that changes.</p></div>
-        </details>
-      </div>
-    </section>
+      </section>
 
-    <section tabindex="-1" id="preorder" class="section preorder-panel" aria-labelledby="preorder-heading">
-      <h2 id="preorder-heading">How to order and pick up</h2>
-      <ol class="preorder-steps">
-        <li><strong>Send your request.</strong> Message Marcus on WhatsApp at least one day ahead. Include your name, what you want and your pickup day.</li>
-        <li><strong>Wait for a reply.</strong> Marcus will confirm your pickup time.</li>
-        <li><strong>Pick up your order.</strong> Come to 17 Boundary Road, East Legon, at the agreed time.</li>
-      </ol>
-      <a class="whatsapp-button preorder-link" href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20preorder.%0AName%3A%20%0AOrder%3A%20%0APickup%20day%3A%20">
-        <img src="assets/whatsapp.svg" width="20" height="20" alt="">
-        Preorder on WhatsApp
-      </a>
-    </section>
-
-    <section tabindex="-1" id="about" class="section about-section" aria-labelledby="about-heading">
-      <p class="eyebrow">A small bakery. A familiar face.</p>
-      <h2 id="about-heading">Meet Marcus</h2>
-      <p class="about-copy">Marcus started The Corner Loaf after years of baking at home for friends and family. What started as a hobby turned into a proper small bakery when demand grew too much to keep up with.</p>
-      <p class="about-copy">Everything is made by hand in small batches. No mass production, no shortcuts. Just bread, pastries and a neighbourhood shop to stop by.</p>
-    </section>
-
-    <section tabindex="-1" id="contact" class="section contact-panel" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Get in touch</h2>
-      <address class="contact-details">
-        <p>
-          <a class="whatsapp-button" href="https://wa.me/233551000000">
-            <img src="assets/whatsapp.svg" width="20" height="20" alt="">
-            Chat on WhatsApp
+      <section
+        id="visit"
+        class="visit-panel section"
+        aria-labelledby="visit-heading"
+        tabindex="-1"
+      >
+        <div class="visit-address">
+          <p class="eyebrow">Location &amp; hours</p>
+          <h2 id="visit-heading">Visit the bakery</h2>
+          <address>17 Boundary Road<br />East Legon, Accra</address>
+          <a
+            class="directions-link"
+            href="https://www.google.com/maps/search/?api=1&amp;query=17%20Boundary%20Road%2C%20East%20Legon%2C%20Accra"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+            Get directions
           </a>
-        </p>
-        <p>Email: <a class="contact-email" href="mailto:thecornerloaf@email.com">thecornerloaf@email.com</a></p>
-      </address>
-    </section>
-  </main>
+        </div>
+        <dl class="hours-list">
+          <div class="hours-row">
+            <dt>Monday&ndash;Friday</dt>
+            <dd>7am&ndash;5pm</dd>
+          </div>
+          <div class="hours-row">
+            <dt>Saturday</dt>
+            <dd>7am&ndash;2pm</dd>
+          </div>
+          <div class="hours-row">
+            <dt>Sunday</dt>
+            <dd>Closed</dd>
+          </div>
+        </dl>
+      </section>
 
-  <footer class="site-footer container"><p>The Corner Loaf · Handmade in Accra.</p><a href="#top">Back to top ↑</a></footer>
-</body>
+      <section
+        tabindex="-1"
+        id="faq"
+        class="section"
+        aria-labelledby="faq-heading"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">A few things to know</p>
+          <h2 id="faq-heading">Preorder questions</h2>
+          <p class="section-description">
+            Planning ahead? Here's how collection and ordering work.
+          </p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How far in advance do I need to order?</summary>
+            <div class="faq-body">
+              <p>
+                We ask for at least one day's notice before your chosen
+                collection day. For large orders or custom items, two to three
+                days is better. This gives us time to plan our bake and make
+                sure everything is ready for you.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>How do I collect my order?</summary>
+            <div class="faq-body">
+              <p>
+                Come to the bakery at your agreed collection time. We will have
+                your order bagged and labelled. If you are running late, let us
+                know — we can usually hold orders for up to two hours after the
+                agreed time.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Can I cancel or change my order?</summary>
+            <div class="faq-body">
+              <p>
+                Yes, but please let us know as early as possible. If we have
+                already started baking your order, we may not be able to cancel
+                it. Changes to quantity are usually fine if you give us a day's
+                notice.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you deliver?</summary>
+            <div class="faq-body">
+              <p>
+                We do not currently offer delivery. All orders must be collected
+                from the bakery in person. We are looking at delivery options
+                for the future — follow us on Instagram to hear when that
+                changes.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        tabindex="-1"
+        id="preorder"
+        class="section preorder-panel"
+        aria-labelledby="preorder-heading"
+      >
+        <h2 id="preorder-heading">How to order and pick up</h2>
+        <ol class="preorder-steps">
+          <li>
+            <strong>Send your request.</strong> Message Marcus on WhatsApp at
+            least one day ahead. Include your name, what you want and your
+            pickup day.
+          </li>
+          <li>
+            <strong>Wait for a reply.</strong> Marcus will confirm your pickup
+            time.
+          </li>
+          <li>
+            <strong>Pick up your order.</strong> Come to 17 Boundary Road, East
+            Legon, at the agreed time.
+          </li>
+        </ol>
+        <a
+          class="whatsapp-button preorder-link"
+          href="https://wa.me/233551000000?text=Hi%20Marcus%2C%20I%27d%20like%20to%20preorder.%0AName%3A%20%0AOrder%3A%20%0APickup%20day%3A%20"
+        >
+          <img src="assets/whatsapp.svg" width="20" height="20" alt="" />
+          Preorder on WhatsApp
+        </a>
+      </section>
+
+      <section
+        tabindex="-1"
+        id="about"
+        class="section about-section"
+        aria-labelledby="about-heading"
+      >
+        <p class="eyebrow">A small bakery. A familiar face.</p>
+        <h2 id="about-heading">Meet Marcus</h2>
+        <p class="about-copy">
+          Marcus started The Corner Loaf after years of baking at home for
+          friends and family. What started as a hobby turned into a proper small
+          bakery when demand grew too much to keep up with.
+        </p>
+        <p class="about-copy">
+          Everything is made by hand in small batches. No mass production, no
+          shortcuts. Just bread, pastries and a neighbourhood shop to stop by.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <div class="footer-grid">
+        <section
+          class="footer-section footer-brand"
+          aria-labelledby="footer-brand-heading"
+        >
+          <h2 class="footer-heading" id="footer-brand-heading">
+            The Corner Loaf
+          </h2>
+
+          <p class="footer-description">
+            Small-batch bread and pastries made by Marcus in East Legon.
+          </p>
+        </section>
+
+        <nav class="footer-section" aria-labelledby="footer-nav-heading">
+          <h2 class="footer-heading" id="footer-nav-heading">Explore</h2>
+
+          <ul class="footer-link-list">
+            <li><a href="#bakes">Menu today</a></li>
+            <li><a href="#preorder">Preorder</a></li>
+            <li><a href="#faq">Preorder FAQs</a></li>
+            <li><a href="#about">About Marcus</a></li>
+            <li><a href="#visit">Location &amp; hours</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <section
+          id="contact"
+          class="footer-section"
+          aria-labelledby="footer-contact-heading"
+          tabindex="-1"
+        >
+          <h2 class="footer-heading" id="footer-contact-heading">
+            Get in touch
+          </h2>
+
+          <div class="footer-contact-icons">
+            <a
+              class="footer-icon-button"
+              href="https://wa.me/233551000000"
+              aria-label="Chat on WhatsApp"
+              title="WhatsApp"
+            >
+              <img src="assets/whatsapp.svg" alt="" width="20" height="20" />
+            </a>
+
+            <a
+              class="footer-icon-button"
+              href="mailto:thecornerloaf@email.com"
+              aria-label="Email The Corner Loaf"
+              title="Email"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <section class="footer-section" aria-labelledby="footer-visit-heading">
+          <h2 class="footer-heading" id="footer-visit-heading">Visit us</h2>
+
+          <address class="footer-address">
+            17 Boundary Road<br />
+            East Legon, Accra
+          </address>
+
+          <a
+            class="footer-directions-link"
+            href="https://www.google.com/maps/search/?api=1&amp;query=17%20Boundary%20Road%2C%20East%20Legon%2C%20Accra"
+          >
+            Get directions
+          </a>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Corner Loaf · Handmade in Accra.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+  </body>
 </html>

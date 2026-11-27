@@ -19,8 +19,7 @@
   max-width: 65ch;
 }
 
-.preorder-panel,
-.contact-panel {
+.preorder-panel {
   padding: var(--space-24);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -37,15 +36,8 @@
   margin-block-start: var(--space-8);
 }
 
-.preorder-link,
-.contact-details {
+.preorder-link {
   margin-top: var(--space-12);
-}
-
-.contact-email {
-  display: inline-block;
-  min-height: 2.75rem;
-  padding-block: var(--space-8);
 }
 
 .whatsapp-button {

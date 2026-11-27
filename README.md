@@ -19,17 +19,49 @@ When publishing a CSS change, update the edited stylesheet’s `?v=` value in `i
 
 ## Local preview
 
-Open `index.html`, or run `python -m http.server 5500` and visit http://localhost:5500 for a local preview.
+Install Node.js 24 LTS, then run these commands from the repository root.
+
+```sh
+npm ci
+npx vite
+```
+
+Open the URL Vite prints in the terminal (usually http://localhost:5173).
+
+`npm ci` installs the versions recorded in `package-lock.json`. Without that lockfile-based install, contributors can end up with different tool versions and get different lint or formatting results from the same files.
+
+Vite serves the site over HTTP and updates the preview as you edit. Opening `index.html` directly skips the HTTP requests the deployed site uses to load stylesheets and images, so the local preview would miss problems that only show up when the site is served.
 
 ## Linting and formatting
 
-Install Node.js 24 LTS and run `npm ci` from the repository root to install the shared development tools. The site opens directly in the browser.
-
-- `npm run lint` checks browser JavaScript in `js/` with ESLint's recommended rules.
-- `npm run format:check` checks the site's HTML, CSS, and JavaScript against Prettier's defaults.
-- `npm run format` applies Prettier formatting to those files. To format a single file, run `npx prettier --write path/to/file`.
+- **ESLint** checks the browser scripts in `js/` when you run `npm run lint`. The config applies ESLint's recommended rules and recognizes browser globals such as `document`. If a script uses `documnt` by mistake, ESLint flags the undefined name. Without the check, the typo can reach the browser and throw a `ReferenceError` only when that code runs.
+- **Prettier** gives `index.html` and the files in `css/` and `js/` a consistent format. The empty `.prettierrc` uses Prettier's defaults. Without a shared formatter, contributors' editor settings can produce different indentation and line wrapping, making it harder to spot functional changes in a review. Run `npm run format:check` to detect differences or `npm run format` to apply the formatting. To format a single file, run `npx prettier --write path/to/file`.
 
 Existing site files may report formatting differences. Keep the initial formatting pass and future formatting-only changes in separate commits so reviewers can focus on behavior changes in a pull request. Commit `package-lock.json` when changing tool dependencies so contributors install the same versions.
+
+## Accessibility checks
+
+From the repository root, install the dependencies and Playwright's Chromium browser, then run the suite.
+
+```sh
+npm ci
+npx playwright install chromium
+npm run test:a11y
+```
+
+On Linux, use `npx playwright install --with-deps chromium` if the browser needs system libraries. Playwright starts Vite on `127.0.0.1:4173` for the tests.
+
+The suite runs axe scans for automatically detectable WCAG 2.1 A and AA violations on the desktop homepage, the mobile homepage with navigation open, and the mobile homepage with a preorder FAQ expanded. GitHub Actions runs the same suite in its **Accessibility** job on pushes and on pull requests targeting `develop` or `main`. A failed scan lists the axe rule, affected selectors, and details in the job log. Continue to test with a keyboard and screen reader during review.
+
+## Git hooks
+
+Husky sets up the Git hooks during `npm ci`. The `pre-commit` hook runs `npm run lint:staged`, which uses lint-staged to run ESLint on staged JavaScript files in `js/`. When a file has both staged and unstaged edits, lint-staged temporarily hides the unstaged edits so ESLint sees what will be committed. Without that step, an unstaged fix could hide an error in the commit. Run `npm run lint` to check all browser scripts.
+
+The `commit-msg` hook checks that the first line uses an allowed type, a scope, and a subject as described in the [commit message guide](CONTRIBUTING.md#commit-messages). That catches messages like `fix: correct opening hours` before they enter the history.
+
+GitHub Actions runs `npm run lint` and `npm run format:check` on pushes and on pull requests targeting `develop` or `main`. It also checks that those pull requests follow the [title format](CONTRIBUTING.md#pull-requests).
+
+On machines with AmaliTech-managed Git hooks, the managed `pre-commit` hook runs the repository's lint check. Automatic message validation there requires the managed hooks to forward `commit-msg`. To check a message file manually, run `node .husky/check-commit-message.mjs path/to/message.txt`.
 
 ## Project notes
 
@@ -37,12 +69,13 @@ Each **Order now** link opens a WhatsApp draft that names the bake and asks abou
 
 The **How to order and pick up** guide gives first-time customers three short steps before they open WhatsApp. It explains what to send at least one day ahead, when to wait for confirmation, and where to collect the order. The [EE02 write-up](docs/ee02/write-up.md#further-improvement) explains who it helps and how it was tested.
 
-The live site handles preorders through WhatsApp and enquiries through WhatsApp or email. The forms in the [initial self-audit](audit.md) were part of an earlier prototype. The [decision log](decisions.md#forms-to-restore-in-the-javascript-lessons) records what to restore during the JavaScript lessons.
+The live site handles preorders through WhatsApp and enquiries through WhatsApp or email. The forms in the [initial self-audit](docs/ee01/audit.md) were part of an earlier prototype. The [decision log](docs/ee01/decisions.md#forms-to-restore-in-the-javascript-lessons) records what to restore during the JavaScript lessons.
 
 AI helped with brainstorming, low-level Markdown formatting and wording, and assisted with HTML/CSS implementation, image optimization and checks. I owned the design decisions and final choices, directing and reviewing the work.
 
 ## Documentation
 
-- [Starter-page diagnosis](diagnosis.md), [design notes](note.md), [decision log](decisions.md) and [initial self-audit](audit.md).
+- [EE03 team conventions for contributors](CONTRIBUTING.md).
+- [Starter-page diagnosis](docs/ee01/diagnosis.md), [design notes](docs/ee01/note.md), [decision log](docs/ee01/decisions.md) and [initial self-audit](docs/ee01/audit.md).
 - EE02 review of Ansah Frederick’s site. [Audit I wrote](docs/ee02/audit-of-ansah-frederick.md) and [testing log for his site](docs/ee02/testing-log.md).
 - EE02 review of this site. [Audit received from Ansah Frederick](https://github.com/AnsFredd/the-corner-loaf-redesign/blob/main/docs/ee02/audit-of-elvis-fosu.md) and [write-up of my fixes and further improvement](docs/ee02/write-up.md).

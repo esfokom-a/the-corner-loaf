@@ -17,14 +17,14 @@ These decisions explain the final page and how it supports The Corner Loaf's cus
 - I used burnt orange (#B54708) for prices, links and buttons, pale orange (#FBE8D4) for opening status, and sage (#EDF0E5) for location and hours. These colours separate important information without making the page feel corporate.
 - I chose Fraunces 600 from Google Fonts for the bakery name and section headings, with Georgia/serif fallbacks. Arial keeps practical information familiar and readable.
 
-| Text | Mobile | Wider screens |
-| --- | --- | --- |
-| Bakery name | 40px | 56px |
-| Section headings | 24px | 24px |
-| Product names | 18px | 20px |
-| Prices | 20px | 20px |
-| Body text | 16px | 16px |
-| Secondary text | 14px | 14px |
+| Text             | Mobile | Wider screens |
+| ---------------- | ------ | ------------- |
+| Bakery name      | 40px   | 56px          |
+| Section headings | 24px   | 24px          |
+| Product names    | 18px   | 20px          |
+| Prices           | 20px   | 20px          |
+| Body text        | 16px   | 16px          |
+| Secondary text   | 14px   | 14px          |
 
 ## Spacing and responsive CSS
 

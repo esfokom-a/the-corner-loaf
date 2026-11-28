@@ -7,15 +7,15 @@
 
 ## Overall assessment
 
-The site performed well across the accessibility checks covered in this audit. Keyboard navigation, form labels and feedback, and the narrow-screen layout worked well in testing. The four findings are limited to specific interactions or display conditions and they are very minor. They matter to the people who encounter them, and each points to a targeted improvement that builds on what already works. 
+The site performed well across the accessibility checks covered in this audit. Keyboard navigation, form labels and feedback, and the narrow-screen layout worked well in testing. The four findings are limited to specific interactions or display conditions and they are very minor. They matter to the people who encounter them, and each points to a targeted improvement that builds on what already works.
 
 ## Automated results
 
-| Tool | Result | Evidence |
-| --- | --- | --- |
-| WAVE, desktop Chrome | **0 errors, 4 contrast errors, 23 alerts, AIM 8.4/10** | [Desktop report](screenshots/13-wave-desktop-summary.jpg) |
-| WAVE, narrower Chromium view | 0 errors, 4 contrast errors, 24 alerts, AIM 8.4/10 | [Earlier report](screenshots/01-wave-summary.jpg) |
-| axe-core 4.10.2 | 0 violations, 42 passes, 7 items requiring review | [Testing log](testing-log.md#automated-tools) |
+| Tool                                | Result                                                                     | Evidence                                                      |
+| ----------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| WAVE, desktop Chrome                | **0 errors, 4 contrast errors, 23 alerts, AIM 8.4/10**                     | [Desktop report](screenshots/13-wave-desktop-summary.jpg)     |
+| WAVE, narrower Chromium view        | 0 errors, 4 contrast errors, 24 alerts, AIM 8.4/10                         | [Earlier report](screenshots/01-wave-summary.jpg)             |
+| axe-core 4.10.2                     | 0 violations, 42 passes, 7 items requiring review                          | [Testing log](testing-log.md#automated-tools)                 |
 | Lighthouse 13.5.0, mobile emulation | Accessibility 100/100, 22 passed, 10 manual checks listed, 41 inapplicable | [Lighthouse report](screenshots/12-lighthouse-mobile-100.png) |
 
 The WAVE alerts concerned very small text. WAVE flagged four hero text elements against the solid page background. When the photo was hidden, the tagline measured **3.30:1** against the remaining overlay and page background, below the 4.5:1 minimum for normal text. Add a dark fallback background to the hero (1.4.3 Contrast (Minimum), AA). [WAVE contrast detail](screenshots/02-wave-hero-contrast.jpg)
